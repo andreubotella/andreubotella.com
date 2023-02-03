@@ -18,6 +18,18 @@ serve((req) => {
   const url = new URL(req.url);
   const firstPathComponent = url.pathname.split("/")[1];
 
+  // www redirect, etc. We make an exception for localhost.
+  if (
+    url.origin !== "https://andreubotella.com" &&
+    url.hostname !== "localhost"
+  ) {
+    const redirect = new URL(
+      url.pathname + url.search,
+      "https://andreubotella.com",
+    );
+    return Response.redirect(redirect);
+  }
+
   if (FORBIDDEN_DIRECTORIES.includes(firstPathComponent)) {
     return new Response("<h1>Forbidden", {
       status: 403,
