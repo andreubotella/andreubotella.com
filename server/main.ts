@@ -50,7 +50,6 @@ serve((req) => {
   }
 
   return serveDir(req, {
-    fsRoot: "..",
     showDirListing: false,
     showDotfiles: false,
     showIndex: true,
