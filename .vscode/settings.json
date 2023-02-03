@@ -1,4 +1,5 @@
 {
     "html.format.wrapLineLength": 100,
-    "prettier.printWidth": 100
+    "prettier.printWidth": 100,
+    "deno.enable": true
 }
