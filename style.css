@@ -68,6 +68,10 @@ main,
   content: url("./twitter-social.png");
   content: url("./twitter-social.png") / "Twitter:";
 }
+#socials #social-mastodon {
+  content: url("./mastodon-social.png");
+  content: url("./mastodon-social.png") / "Mastodon:";
+}
 #socials #social-cohost {
   content: url("./cohost-social.png");
   content: url("./cohost-social.png") / "Cohost:";
