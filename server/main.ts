@@ -18,16 +18,18 @@ serve((req) => {
   const url = new URL(req.url);
   const firstPathComponent = url.pathname.split("/")[1];
 
+  const replaceHost = (host: string) => {
+    return new URL(url.pathname + url.search, host);
+  };
+
   // www redirect, etc. We make an exception for localhost.
   if (
     url.origin !== "https://andreubotella.com" &&
     url.hostname !== "localhost"
   ) {
-    const redirect = new URL(
-      url.pathname + url.search,
-      "https://andreubotella.com",
+    return Response.redirect(
+      replaceHost("https://andreubotella.com"),
     );
-    return Response.redirect(redirect);
   }
 
   if (FORBIDDEN_DIRECTORIES.includes(firstPathComponent)) {
@@ -38,25 +40,19 @@ serve((req) => {
   }
 
   if (GITHUB_IO_REDIRECTS.includes(firstPathComponent)) {
-    const redirect = new URL(
-      url.pathname + url.search,
-      "https://andreubotella.github.io",
+    return Response.redirect(
+      replaceHost("https://andreubotella.github.io"),
     );
-    return Response.redirect(redirect);
   }
 
   // Mastodon webfinger redirect
   if (url.pathname === "/.well-known/webfinger") {
-    const redirect = new URL(
-      url.pathname + url.search,
-      "https://mastodon.andreubotella.com",
-    );
     // We don't use Response.redirect because we need CORS headers.
     return new Response(null, {
       status: 301,
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Location": redirect.href,
+        "Location": replaceHost("https://mastodon.andreubotella.com").href,
       },
     });
   }
