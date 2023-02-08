@@ -31,6 +31,6 @@ jobs:
       - name: Deploy
         uses: denoland/deployctl@v1
         with:
-          project: andreubotella-com.deno.dev
+          project: andreubotella-com
           entrypoint: server/main.ts
           root: dist
