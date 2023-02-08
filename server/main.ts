@@ -44,7 +44,7 @@ serve((req) => {
   }
 
   return serveDir(req, {
-    fsRoot: "./_site",
+    fsRoot: "./out",
     showDirListing: false,
     showDotfiles: false,
     showIndex: true,
