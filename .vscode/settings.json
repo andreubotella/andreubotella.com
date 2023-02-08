@@ -1,5 +1,6 @@
 {
-    "html.format.wrapLineLength": 100,
-    "prettier.printWidth": 100,
-    "deno.enable": true
+  "html.format.wrapLineLength": 100,
+  "prettier.printWidth": 100,
+  "deno.enable": true,
+  "deno.config": "./deno.json"
 }

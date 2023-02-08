@@ -1,13 +1,6 @@
 import { serve } from "https://deno.land/std@0.176.0/http/server.ts";
 import { serveDir } from "https://deno.land/std@0.176.0/http/file_server.ts";
 
-const FORBIDDEN_DIRECTORIES = [
-  ".git",
-  ".github",
-  ".vscode",
-  "server",
-];
-
 const GITHUB_IO_REDIRECTS = [
   "csswg-auto-build",
   "csswg-drafts",
@@ -32,13 +25,6 @@ serve((req) => {
     );
   }
 
-  if (FORBIDDEN_DIRECTORIES.includes(firstPathComponent)) {
-    return new Response("<h1>Forbidden", {
-      status: 403,
-      headers: { "Content-Type": "text/html" },
-    });
-  }
-
   if (GITHUB_IO_REDIRECTS.includes(firstPathComponent)) {
     return Response.redirect(
       replaceHost("https://andreubotella.github.io"),
@@ -58,6 +44,7 @@ serve((req) => {
   }
 
   return serveDir(req, {
+    fsRoot: "./_site",
     showDirListing: false,
     showDotfiles: false,
     showIndex: true,
