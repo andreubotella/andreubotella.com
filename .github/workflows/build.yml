@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
+    permissions:
+      id-token: write
+      contents: read
+
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
