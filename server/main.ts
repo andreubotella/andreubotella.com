@@ -15,10 +15,12 @@ serve((req) => {
     return new URL(url.pathname + url.search, host);
   };
 
-  // www redirect, etc. We make an exception for localhost.
+  // www redirect, etc. We make an exception for localhost, and for
+  // preview Deno Deploy deployments.
   if (
+    url.hostname !== "localhost" &&
     url.origin !== "https://andreubotella.com" &&
-    url.hostname !== "localhost"
+    !/^https:\/\/andreubotella-com-[0-9a-z]+\.deno\.dev$/.test(url.origin)
   ) {
     return Response.redirect(
       replaceHost("https://andreubotella.com"),
