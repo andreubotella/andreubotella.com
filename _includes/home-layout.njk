@@ -1,0 +1,46 @@
+---
+layout: layout.njk
+additional_css:
+  - /home-page.css
+---
+<main>
+  {{ content | safe }}
+</main>
+
+<nav id="socials">
+  <h1>Contact</h1>
+
+  <dl role="list">
+    <dt id="social-twitter" title="Twitter">Twitter:</dt>
+    <dd><a target="_new" href="https://twitter.com/AndreuBotella">@AndreuBotella</a></dd>
+    <dt id="social-mastodon" title="Mastodon">Mastodon:</dd>
+    <dd><a target="_new" rel="me" href="https://mastodon.andreubotella.com/@andreu">@andreu@andreubotella.com</a></dd>
+    <dt id="social-cohost" title="Cohost">Cohost:</dt>
+    <dd><a target="_new" href="https://cohost.org/andreubotella">@andreubotella</a></dd>
+    <dt id="social-github" title="GitHub">GitHub:</dt>
+    <dd><a target="_new" href="https://github.com/andreubotella">andreubotella</a></dd>
+    <dt id="social-linkedin" title="LinkedIn">LinkedIn:</dt>
+    <dd>
+      <a target="_new" href="https://www.linkedin.com/in/andreu-botella-botella">Andreu Botella</a>
+    </dd>
+    <dt id="social-matrix" title="Matrix">Matrix:</dt>
+    <dd>
+      <a target="_new" href="https://matrix.to/#/@abotella:igalia.com">@abotella:igalia.com</a>
+    </dd>
+    <dt id="social-email" title="Email">Email:</dt>
+    <dd>
+      <a target="_new" href="mailto:andreu&#x040;andreubotella.com">andreu&#x040;andreubotella.com</a>
+      (personal)
+    </dd>
+    <dd>
+      <a target="_new" href="mailto:abotella&#x040;igalia.com">abotella&#x040;igalia.com</a>
+      (work)
+    </dd>
+    <dt id="social-pubkey" title="Public key">Public key:</dt>
+    <dd>
+      <a target="_new" href="https://keys.mailvelope.com/pks/lookup?op=get&search=0x3CC8BD9D9311F58F87979B565D4FFE9260FAA4E9">
+        <code>3CC8 BD9D 9311 F58F 8797 9B56 5D4F FE92 60FA A4E9</code>
+      </a>
+    </dd>
+  </dl>
+</nav>
