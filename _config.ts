@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts";
+import metas from "lume/plugins/metas.ts";
 
 const site = lume({
   dest: "./out",
@@ -7,6 +8,8 @@ const site = lume({
     ignore: ["./server"],
   },
 });
+
+site.use(metas());
 
 site.copy("static", ".");
 
