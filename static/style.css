@@ -1,1 +1,49 @@
-/* TODO */
+:root {
+  color-scheme: only light;
+
+  --background: white;
+  --foreground: #333;
+
+  --link-color: #0000EE;
+  --visited-link-color: #551A8B;
+  --active-link-color: #EE0000;
+
+  /* Code blocks */
+  --default-code-color: var(--foreground);
+  --code-bg: #f5f2f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: only dark;
+
+    --background: #161616;
+    --foreground: #f8f8f2;
+
+    --link-color: #8C8CFF;
+    --visited-link-color: #FFADFF;
+    --active-link-color: #FF6666;
+
+    --code-bg: #272822;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+pre, code {
+  color: var(--default-code-color);
+  background-color: var(--code-bg);
+}
+
+:link, :link code {
+  color: var(--link-color);
+}
+:visited, :visited code {
+  color: var(--visited-link-color);
+}
+:link:active, :visited:active, :link:active code, :visited:active code {
+  color: var(--active-link-color);
+}

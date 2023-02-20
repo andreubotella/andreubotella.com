@@ -97,6 +97,24 @@ main,
   content: url("./pubkey-social.png");
   content: url("./pubkey-social.png") / "Public key:";
 }
+@media (prefers-color-scheme: dark) {
+  #socials #social-github {
+    content: url("./github-social-dark.png");
+    content: url("./github-social-dark.png") / "GitHub:";
+  }
+  #socials #social-matrix {
+    content: url("./matrix-social-dark.png");
+    content: url("./matrix-social-dark.png") / "Matrix:";
+  }
+  #socials #social-email {
+    content: url("./email-social-dark.png");
+    content: url("./email-social-dark.png") / "Email:";
+  }
+  #socials #social-pubkey {
+    content: url("./pubkey-social-dark.png");
+    content: url("./pubkey-social-dark.png") / "Public key:";
+  }
+}
 #socials dd {
   font-size: var(--handle-font-size);
   margin: 0 var(--logo-margin);
