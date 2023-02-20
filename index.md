@@ -1,5 +1,5 @@
 ---
-layout: layout.njk
+layout: home-layout.njk
 ---
 
 # AndreuBotella.com
