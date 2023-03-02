@@ -65,54 +65,54 @@ main,
   margin: var(--logo-margin);
 }
 #socials #social-twitter {
-  content: url("./twitter-social.png");
-  content: url("./twitter-social.png") / "Twitter:";
+  content: url("/images/twitter-social.png");
+  content: url("/images/twitter-social.png") / "Twitter:";
 }
 #socials #social-mastodon {
-  content: url("./mastodon-social.png");
-  content: url("./mastodon-social.png") / "Mastodon:";
+  content: url("/images/mastodon-social.png");
+  content: url("/images/mastodon-social.png") / "Mastodon:";
 }
 #socials #social-cohost {
-  content: url("./cohost-social.png");
-  content: url("./cohost-social.png") / "Cohost:";
+  content: url("/images/cohost-social.png");
+  content: url("/images/cohost-social.png") / "Cohost:";
 }
 #socials #social-github {
-  content: url("./github-social.png");
-  content: url("./github-social.png") / "GitHub:";
+  content: url("/images/github-social.png");
+  content: url("/images/github-social.png") / "GitHub:";
 }
 #socials #social-linkedin {
-  content: url("./linkedin-social.png");
-  content: url("./linkedin-social.png") / "LinkedIn:";
+  content: url("/images/linkedin-social.png");
+  content: url("/images/linkedin-social.png") / "LinkedIn:";
 }
 #socials #social-matrix {
-  content: url("./matrix-social.png");
-  content: url("./matrix-social.png") / "Matrix:";
+  content: url("/images/matrix-social.png");
+  content: url("/images/matrix-social.png") / "Matrix:";
 }
 #socials #social-email {
-  content: url("./email-social.png");
-  content: url("./email-social.png") / "Email:";
+  content: url("/images/email-social.png");
+  content: url("/images/email-social.png") / "Email:";
   grid-row-end: span 2;
 }
 #socials #social-pubkey {
-  content: url("./pubkey-social.png");
-  content: url("./pubkey-social.png") / "Public key:";
+  content: url("/images/pubkey-social.png");
+  content: url("/images/pubkey-social.png") / "Public key:";
 }
 @media (prefers-color-scheme: dark) {
   #socials #social-github {
-    content: url("./github-social-dark.png");
-    content: url("./github-social-dark.png") / "GitHub:";
+    content: url("/images/github-social-dark.png");
+    content: url("/images/github-social-dark.png") / "GitHub:";
   }
   #socials #social-matrix {
-    content: url("./matrix-social-dark.png");
-    content: url("./matrix-social-dark.png") / "Matrix:";
+    content: url("/images/matrix-social-dark.png");
+    content: url("/images/matrix-social-dark.png") / "Matrix:";
   }
   #socials #social-email {
-    content: url("./email-social-dark.png");
-    content: url("./email-social-dark.png") / "Email:";
+    content: url("/images/email-social-dark.png");
+    content: url("/images/email-social-dark.png") / "Email:";
   }
   #socials #social-pubkey {
-    content: url("./pubkey-social-dark.png");
-    content: url("./pubkey-social-dark.png") / "Public key:";
+    content: url("/images/pubkey-social-dark.png");
+    content: url("/images/pubkey-social-dark.png") / "Public key:";
   }
 }
 #socials dd {
