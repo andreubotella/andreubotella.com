@@ -594,6 +594,7 @@
     "https://deno.land/x/lume@v1.15.3/deps/nunjucks.ts": "a8f31de092612a613680944e10b3647ccf91a1db4e099f046c3e73a40f8a6193",
     "https://deno.land/x/lume@v1.15.3/deps/path.ts": "276bb6077962eba04b3db3de4e378303e422791c897ce2ac08d8bb73248224cc",
     "https://deno.land/x/lume@v1.15.3/deps/react.ts": "6ce99e14ad6bd9ce09f69c90b5a5597e44be78eab7f334bcab31f4824b12536a",
+    "https://deno.land/x/lume@v1.15.3/deps/unidecode.ts": "7479d3695704320279c8c3468ec4801a70064a7471f9974e04c45852ca882769",
     "https://deno.land/x/lume@v1.15.3/deps/yaml.ts": "4e7333ee5269353315aa0f19d1fe04d704438c7fcb860d36398708036ed1661d",
     "https://deno.land/x/lume@v1.15.3/middlewares/logger.ts": "69e69099a2e3a8c62d0bb62014381337f6e855c6b330e210e4a705fe8111e10a",
     "https://deno.land/x/lume@v1.15.3/middlewares/no_cache.ts": "95fb11d820d931b6aca268fa30aee22e315c556bd214e135bb9b5ddbcbe039d6",
@@ -601,6 +602,7 @@
     "https://deno.land/x/lume@v1.15.3/middlewares/reload.ts": "031c06bb4b090d92b9a209d78ea54956a108e84acb8dfe9a44aad3737e882676",
     "https://deno.land/x/lume@v1.15.3/middlewares/reload_client.js": "34d75e01503fae8180796de882af42b1125fac88f22a010a99d5548de1ba7d72",
     "https://deno.land/x/lume@v1.15.3/mod.ts": "2327311f1e815538a92e611b037ed59b987782c265d8877a61fba5c146e151ba",
+    "https://deno.land/x/lume@v1.15.3/plugins/date.ts": "5b5b4a5715db86c39b4342366d3cc1e5ee67fd57d58acc0d0d793f90de4d53f6",
     "https://deno.land/x/lume@v1.15.3/plugins/imagick.ts": "50983cad8e4b97fd6004815bcbeb0fa3e3d332388ecd3bfe6e02a94e5710cef6",
     "https://deno.land/x/lume@v1.15.3/plugins/json.ts": "60f3b8616c282a9c592e1974db143b3461999c55b20235eebced87482ebf16bd",
     "https://deno.land/x/lume@v1.15.3/plugins/jsx.ts": "532a055f1c6c6f00d21d13cb658614d5f6fc56ea28266020d371ba5fb151461a",
@@ -610,6 +612,7 @@
     "https://deno.land/x/lume@v1.15.3/plugins/nunjucks.ts": "6d66887a15cd23793f95e9d38df0b77a55b4b037dd743076556d5c54e2953376",
     "https://deno.land/x/lume@v1.15.3/plugins/paginate.ts": "0fefcbb290088bfa8770b84af3cd092a5fd9e8abd0adb426eb74be0927abc0da",
     "https://deno.land/x/lume@v1.15.3/plugins/search.ts": "63b29bf31dfdb4cb9146b5e82c5d86190507842f5da0b85be9ed310c15752076",
+    "https://deno.land/x/lume@v1.15.3/plugins/slugify_urls.ts": "321ab12f08f82711135699dc85f6d530a73c105dd87ae50a9b70505df556b767",
     "https://deno.land/x/lume@v1.15.3/plugins/source_maps.ts": "3d3d97691937019949fa791dbd61002c42d918d07cc7cc37028c5018b9aa1bc4",
     "https://deno.land/x/lume@v1.15.3/plugins/url.ts": "43d3d47896a7322a8dd34572dedb4baa6f73a382594a2ff7c34a3a064dcc6c9e",
     "https://deno.land/x/lume@v1.15.3/plugins/yaml.ts": "df24aac4098dba258f1ac331a3b16ba488a336eb63c51afed8f59201228d583c",
@@ -636,7 +639,8 @@
     "https://deno.land/x/nunjucks@3.2.3-2/src/runtime.js": "e6ebe0265797eaa8e1d974c1e0414c4e4359705024a6617e56fcdaadb3828696",
     "https://deno.land/x/nunjucks@3.2.3-2/src/tests.js": "0f68a51c0be20e82eb033c913bb10bca1fc7eb4fcc603943515aac4608e88999",
     "https://deno.land/x/nunjucks@3.2.3-2/src/transformer.js": "401e3b1588ea2933883cc43cc329077f5b1a3a5da391f9dfc0a2a63a1a89660c",
-    "https://deno.land/x/nunjucks@3.2.3-2/src/waterfall.js": "4d8878b3ebcf0a1b4bf9e7575e2f30bc6467cb8ee3717b80754c945cde661b9e"
+    "https://deno.land/x/nunjucks@3.2.3-2/src/waterfall.js": "4d8878b3ebcf0a1b4bf9e7575e2f30bc6467cb8ee3717b80754c945cde661b9e",
+    "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/reading_time/mod.ts": "45035c1c7e7ce6a10b4715a32eee65133eca8b8be7e01a2799f7e8586265a873"
   },
   "npm": {
     "specifiers": {
@@ -646,7 +650,8 @@
       "markdown-it@13.0.1": "markdown-it@13.0.1",
       "prismjs": "prismjs@1.29.0",
       "react-dom@18.2.0": "react-dom@18.2.0_react@18.2.0",
-      "react@18.2.0": "react@18.2.0"
+      "react@18.2.0": "react@18.2.0",
+      "unidecode@0.1.8": "unidecode@0.1.8"
     },
     "packages": {
       "argparse@2.0.1": {
@@ -727,6 +732,10 @@
       },
       "uc.micro@1.0.6": {
         "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==",
+        "dependencies": {}
+      },
+      "unidecode@0.1.8": {
+        "integrity": "sha512-SdoZNxCWpN2tXTCrGkPF/0rL2HEq+i2gwRG1ReBvx8/0yTzC3enHfugOf8A9JBShVwwrRIkLX0YcDUGbzjbVCA==",
         "dependencies": {}
       }
     }

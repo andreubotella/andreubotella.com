@@ -47,6 +47,57 @@
     }
 }
 
+.post-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+.post-details > * {
+    margin: 0;
+    margin-right: .4em;
+}
+.post-details > *:not(:last-child)::after {
+    content: "·";
+    content: "·" / ""; /* Purely decorative! */
+    margin-left: .4em;
+    font-weight: bold;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1em 0;
+}
+.tags > p {
+    /* 2px is the vertical margin/border/padding of the a tags. We match it here
+     * so the p's baseline matches the tags. */
+    margin: 2px 0;
+    margin-right: 0.6em;
+}
+.tags > ul {
+    display: contents;
+}
+.tags > ul > li {
+    display: block;
+    margin-right: 0.6em;
+}
+.tags > ul > li a {
+    border: 1px solid var(--fg-60);
+    background-color: var(--fg-10);
+    /*
+    border: 1px solid color-mix(in srgb, var(--foreground) 60%, var(--background));
+    background-color: color-mix(in srgb, var(--foreground) 10%, var(--background));
+    */
+    display: block;
+    border-radius: .2em;
+    padding: 0 .5em;
+    margin: 1px 0;
+    color: currentcolor;
+    text-decoration: none;
+}
+
 article {
     margin: 3em 0;
 }

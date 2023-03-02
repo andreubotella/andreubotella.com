@@ -11,6 +11,10 @@
   /* Code blocks */
   --default-code-color: var(--foreground);
   --code-bg: #f5f2f0;
+
+  /* TODO: Remove these variables in favor of color-mix when all browsers implement it */
+  --fg-60: #858585; /* color-mix(in srgb, var(--foreground) 60%, var(--background)) */
+  --fg-10: #EBEBEB; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +29,10 @@
     --active-link-color: #FF6666;
 
     --code-bg: #272822;
+
+    /* TODO: Remove these variables in favor of color-mix when all browsers implement it */
+    --fg-60: #9E9E9E; /* color-mix(in srgb, var(--foreground) 60%, var(--background)) */
+    --fg-10: #2D2D2D; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
   }
 }
 
