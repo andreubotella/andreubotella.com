@@ -17,9 +17,9 @@
     <link rel="preload" href="/fonts/FiraSans-Italic.woff2" as="font" fetchpriority="low" crossorigin />
     <link rel="preload" href="/fonts/FiraSans-Bold.woff2" as="font" crossorigin />
     <link rel="preload" href="/fonts/FiraSans-BoldItalic.woff2" as="font" fetchpriority="low" crossorigin />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/style.css" crossorigin />
     {% for css in additional_css %}
-      <link rel="stylesheet" href="{{ css }}" />
+      <link rel="stylesheet" href="{{ css }}" crossorigin />
     {% endfor %}
     <script>
       let theme = localStorage.theme;
