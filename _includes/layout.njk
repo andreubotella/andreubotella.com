@@ -23,6 +23,10 @@
   </head>
 
   <body>
-    {{ content | safe }}
+    {{ comp.navbar() | safe }}
+
+    <div id="container">
+      {{ content | safe }}
+    </div>
   </body>
 </html>
