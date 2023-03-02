@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+blog: false
 additional_css:
   - /styles/blog.css
 ---
@@ -10,6 +11,7 @@ additional_css:
     <article>
       <header>
         <h1><a href="{{ post.data.url }}">{{ post.data.title | md(true) | safe }}</a></h1>
+        {{ comp.postDetails(post.data) | safe }}
       </header>
       <div class="summary">
         {{ post.data.description | md(true) | safe }}

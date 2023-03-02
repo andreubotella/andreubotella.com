@@ -5,6 +5,7 @@
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.15.3/"
+    "lume/": "https://deno.land/x/lume@v1.15.3/",
+    "lume-experimental-plugins/": "https://raw.githubusercontent.com/lumeland/experimental-plugins/main/"
   }
 }
