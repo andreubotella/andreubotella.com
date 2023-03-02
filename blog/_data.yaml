@@ -4,6 +4,6 @@ published: false
 date: "git created"
 metas:
   type: article
-  title: "=title"
-  description: "=description"
+  title: "=title_plaintext"
+  description: "=description_plaintext"
   keywords: "=tags"

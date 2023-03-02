@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if title %}
+    {% if title_plaintext %}
+      {% set title = title_plaintext + " – AndreuBotella.com" %}
+    {% elif title %}
       {% set title = title + " – AndreuBotella.com" %}
     {% else %}
       {% set title = "AndreuBotella.com" %}

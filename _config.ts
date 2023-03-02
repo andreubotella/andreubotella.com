@@ -4,6 +4,8 @@ import date from "lume/plugins/date.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import readingtime from "lume-experimental-plugins/reading_time/mod.ts";
 import { highlight as markdownHighlight } from "./_util/markdown-it-config.ts";
+import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
+import plaintextMeta from "./_util/plugins/plaintext-meta.ts";
 
 const site = lume({
   dest: "./_out",
@@ -20,7 +22,9 @@ const site = lume({
 site.use(metas())
   .use(date())
   .use(slugifyUrls())
-  .use(readingtime());
+  .use(readingtime())
+  .use(blogAutodescriptor())
+  .use(plaintextMeta());
 
 site.copy("static", ".");
 
