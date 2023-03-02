@@ -1,4 +1,6 @@
 :root {
+    --target-footnote-animation: 5s ease-in-out target;
+
     --code-selection-bg: #b3d4fc;
 
     /* Prism tokens. The colors are for the default PrismJS theme. */
@@ -33,6 +35,15 @@
         --function-token: #e6db74;
         --regex-token: #fd971f;
         --variable-token: var(--operator-token);
+    }
+}
+
+@keyframes target {
+    from {
+        background-color: rgba(100% 100% 0% / 0.2);
+    }
+    to {
+        background-color: rgba(100% 100% 0% / 0);
     }
 }
 
@@ -109,6 +120,41 @@ main header {
 main {
     hyphens: auto;
     margin-bottom: 3em;
+}
+
+/* Footnotes */
+
+.footnote-ref {
+    /* Default browser styling for <sup> */
+    vertical-align: super;
+    line-height: normal;
+    font-size: smaller;
+}
+
+.footnotes {
+    margin: 2.2em 0;
+    border-top: 2px solid gray;
+    padding-top: 1em;
+}
+
+#footnote-label {
+    /* Hidden visually, but not for assistive technology
+     * See https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+     */
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.footnote-item:target {
+    animation: var(--target-footnote-animation);
+}
+.footnote-ref:target {
+    animation: var(--target-footnote-animation);
 }
 
 /* Code blocks */
