@@ -5,6 +5,7 @@ import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import readingtime from "lume-experimental-plugins/reading_time/mod.ts";
 import markdownItConfig from "./_util/markdown-it-config.ts";
 import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
+import capitalize from "./_util/plugins/capitalize.ts";
 import plaintextMeta from "./_util/plugins/plaintext-meta.ts";
 
 const site = lume({
@@ -17,6 +18,7 @@ const site = lume({
 site.use(metas())
   .use(date())
   .use(slugifyUrls())
+  .use(capitalize())
   .use(readingtime())
   .use(blogAutodescriptor())
   .use(plaintextMeta());
