@@ -1,3 +1,41 @@
+:root {
+    --code-selection-bg: #b3d4fc;
+
+    /* Prism tokens. The colors are for the default PrismJS theme. */
+    --comment-token: slategray;
+    --punctuation-token: #999;
+    --symbol-token: #905;
+    --numeric-token: var(--symbol-token);
+    --literal-token: #690;
+    --operator-token: #9a6e3a;
+    --operator-token-bg: hsla(0, 0%, 100%, .5);
+    --atrule-token: var(--keyword-token);
+    --keyword-token: #07a;
+    --function-token: #DD4A68;
+    --regex-token: var(--variable-token);
+    --variable-token: #e90;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --code-selection-bg: #244A75;
+
+        /* These colors are for the Okaidia theme for PrismJS */
+        --comment-token: #8292a2;
+        --punctuation-token: #f8f8f2;
+        --symbol-token: #f92672;
+        --numeric-token: #ae81ff;
+        --literal-token: #a6e22e;
+        --operator-token: #f8f8f2;
+        --operator-token-bg: inherit;
+        --atrule-token: var(--function-token);
+        --keyword-token: #66d9ef;
+        --function-token: #e6db74;
+        --regex-token: #fd971f;
+        --variable-token: var(--operator-token);
+    }
+}
+
 #container {
     margin: 0 15px;
 }
@@ -32,10 +70,26 @@ code {
     hyphens: none;
 }
 
+/*pre:has(> code:only-child)*/ pre.highlight {
+    line-height: 1.5;
+    tab-size: 4;
+    white-space: pre;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: .5em;
+    overflow: auto;
+}
+
 :not(pre) > code {
     padding: .1em;
     border-radius: .3em;
     white-space: normal;
+}
+
+
+pre.highlight::selection, pre.highlight ::selection,
+code::selection, code ::selection {
+    background-color: var(--code-selection-bg);
 }
 
 figure > iframe {
@@ -52,4 +106,83 @@ figcaption > p:only-child {
 
 h1, h2, h3, figcaption {
     text-wrap: balance;
+}
+
+/* PrismJS tokens */
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--comment-token);
+}
+
+.token.punctuation {
+	color: var(--punctuation-token);
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: var(--symbol-token);
+}
+
+.token.boolean,
+.token.number {
+    color: var(--numeric-token);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: var(--literal-token);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: var(--operator-token);
+	background: var(--operator-token-bg);
+}
+
+.token.atrule,
+.token.attr-value {
+	color: var(--atrule-token);
+}
+
+.token.keyword {
+    color: var(--keyword-token);
+}
+
+.token.function,
+.token.class-name {
+	color: var(--function-token);
+}
+
+.token.regex,
+.token.important {
+	color: var(--regex-token);
+}
+
+.token.variable {
+    color: var(--variable-token);
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
 }
