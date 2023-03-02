@@ -12,8 +12,7 @@
     <p>Tags:</p>
     <ul>
       {% for tag in tags %}
-        {# Tag links TODO #}
-        <li><a>{{ tag }}</a></li>
+        <li><a href="/blog/tag/{{ tag | slugify | urlencode }}/">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   {% else %}
