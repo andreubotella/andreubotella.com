@@ -18,24 +18,22 @@
     --variable-token: #e90;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --code-selection-bg: #244A75;
+:root[data-theme="dark"] {
+    --code-selection-bg: #244A75;
 
-        /* These colors are for the Okaidia theme for PrismJS */
-        --comment-token: #8292a2;
-        --punctuation-token: #f8f8f2;
-        --symbol-token: #f92672;
-        --numeric-token: #ae81ff;
-        --literal-token: #a6e22e;
-        --operator-token: #f8f8f2;
-        --operator-token-bg: inherit;
-        --atrule-token: var(--function-token);
-        --keyword-token: #66d9ef;
-        --function-token: #e6db74;
-        --regex-token: #fd971f;
-        --variable-token: var(--operator-token);
-    }
+    /* These colors are for the Okaidia theme for PrismJS */
+    --comment-token: #8292a2;
+    --punctuation-token: #f8f8f2;
+    --symbol-token: #f92672;
+    --numeric-token: #ae81ff;
+    --literal-token: #a6e22e;
+    --operator-token: #f8f8f2;
+    --operator-token-bg: inherit;
+    --atrule-token: var(--function-token);
+    --keyword-token: #66d9ef;
+    --function-token: #e6db74;
+    --regex-token: #fd971f;
+    --variable-token: var(--operator-token);
 }
 
 @keyframes target {

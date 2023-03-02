@@ -1,9 +1,29 @@
 <header id="site-header">
   <h1>AndreuBotella.com</h1>
+  <button id="theme-toggle" hidden></button>
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="/blog/">Blog</a></li>
     </ul>
   </nav>
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    function switchTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      themeToggle.hidden = false;
+      if (theme === "dark") {
+        themeToggle.ariaLabel = "Switch to light mode";
+        themeToggle.textContent = "☀️";
+      } else {
+        themeToggle.ariaLabel = "Switch to dark mode";
+        themeToggle.textContent = "🌙";
+      }
+      localStorage.theme = theme;
+    }
+    switchTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+    themeToggle.addEventListener("click", () => {
+      switchTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark")
+    });
+  </script>
 </header>
