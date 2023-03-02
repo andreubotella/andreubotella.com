@@ -3,10 +3,12 @@ layout: layout.njk
 additional_css:
   - /styles/blog.css
 ---
-<main>
-  <header>
-    <h1>{{ title | md(true) | safe }}</h1>
-  </header>
+<div id="container">
+  <main>
+    <header>
+      <h1>{{ title | md(true) | safe }}</h1>
+    </header>
 
-  {{ content | safe }}
-</main>
+    {{ content | safe }}
+  </main>
+<div id="container">
