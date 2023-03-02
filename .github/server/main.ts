@@ -1,5 +1,7 @@
-import { serve } from "https://deno.land/std@0.176.0/http/server.ts";
-import { serveDir } from "https://deno.land/std@0.176.0/http/file_server.ts";
+import { serve } from "https://deno.land/std@0.178.0/http/server.ts";
+
+// See https://github.com/denoland/deno_std/pull/3220
+import { serveDir } from "https://raw.githubusercontent.com/denoland/deno_std/main/http/file_server.ts";
 
 const GITHUB_IO_REDIRECTS = [
   "csswg-auto-build",
@@ -46,7 +48,7 @@ serve((req) => {
   }
 
   return serveDir(req, {
-    fsRoot: "./out",
+    fsRoot: "./_out",
     showDirListing: false,
     showDotfiles: false,
     showIndex: true,
