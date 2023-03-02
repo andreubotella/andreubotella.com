@@ -36,8 +36,6 @@
 }
 
 :root {
-  color-scheme: only light;
-
   --background: white;
   --foreground: #333;
 
@@ -54,23 +52,25 @@
   --fg-10: #EBEBEB; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: only dark;
+:root[data-theme="light"] {
+  color-scheme: light only;
+}
 
-    --background: #161616;
-    --foreground: #f8f8f2;
+:root[data-theme="dark"] {
+  color-scheme: dark only;
 
-    --link-color: #8C8CFF;
-    --visited-link-color: #FFADFF;
-    --active-link-color: #FF6666;
+  --background: #161616;
+  --foreground: #f8f8f2;
 
-    --code-bg: #272822;
+  --link-color: #8C8CFF;
+  --visited-link-color: #FFADFF;
+  --active-link-color: #FF6666;
 
-    /* TODO: Remove these variables in favor of color-mix when all browsers implement it */
-    --fg-60: #9E9E9E; /* color-mix(in srgb, var(--foreground) 60%, var(--background)) */
-    --fg-10: #2D2D2D; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
-  }
+  --code-bg: #272822;
+
+  /* TODO: Remove these variables in favor of color-mix when all browsers implement it */
+  --fg-60: #9E9E9E; /* color-mix(in srgb, var(--foreground) 60%, var(--background)) */
+  --fg-10: #2D2D2D; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
 }
 
 body {

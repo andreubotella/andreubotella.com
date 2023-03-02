@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
     {% if title_plaintext %}
       {% set title = title_plaintext + " – AndreuBotella.com" %}
     {% elif title %}
@@ -20,6 +21,14 @@
     {% for css in additional_css %}
       <link rel="stylesheet" href="{{ css }}" />
     {% endfor %}
+    <script>
+      let theme = localStorage.theme;
+      if (!theme) {
+        const darkMode = matchMedia("(prefers-color-scheme: dark)").matches;
+        theme = darkMode ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    </script>
   </head>
 
   <body>
