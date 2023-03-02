@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+additional_css:
+  - /styles/blog.css
+---
+<div id="container">
+  <main>
+    <header>
+      <h1>{{ title | md(true) | safe }}</h1>
+    </header>
+
+    {{ content | safe }}
+  </main>
+<div id="container">

@@ -1,0 +1,19 @@
+---
+layout: layout.njk
+additional_css:
+  - /styles/blog.css
+---
+<div id="container">
+  <h1>My blog</h1>
+
+  {% for post in search.pages("blog=true", "date=desc") %}
+    <article>
+      <header>
+        <h1><a href="{{ post.data.url }}">{{ post.data.title | md(true) | safe }}</a></h1>
+      </header>
+      <div class="summary">
+        {{ post.data.description | md(true) | safe }}
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,9 @@
+layout: blog-post.njk
+blog: true
+published: false
+date: "git created"
+metas:
+  type: article
+  title: "=title"
+  description: "=description"
+  keywords: "=tags"
