@@ -12,6 +12,10 @@
     {% endif %}
     <title>{{ title }}</title>
     <meta name="author" content="Andreu Botella" />
+    <link rel="preload" href="/fonts/FiraSans-Regular.woff2" as="font" crossorigin />
+    <link rel="preload" href="/fonts/FiraSans-Italic.woff2" as="font" fetchpriority="low" crossorigin />
+    <link rel="preload" href="/fonts/FiraSans-Bold.woff2" as="font" crossorigin />
+    <link rel="preload" href="/fonts/FiraSans-BoldItalic.woff2" as="font" fetchpriority="low" crossorigin />
     <link rel="stylesheet" href="/styles/style.css" />
     {% for css in additional_css %}
       <link rel="stylesheet" href="{{ css }}" />
