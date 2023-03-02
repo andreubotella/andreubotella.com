@@ -8,6 +8,6 @@ const site = lume({
 
 site.use(metas());
 
-  site.copy("static", ".")
+site.copy("static", ".");
 
 export default site;
