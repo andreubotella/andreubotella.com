@@ -3,7 +3,7 @@ import metas from "lume/plugins/metas.ts";
 import date from "lume/plugins/date.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import readingtime from "lume-experimental-plugins/reading_time/mod.ts";
-import { highlight as markdownHighlight } from "./_util/markdown-it-config.ts";
+import markdownItConfig from "./_util/markdown-it-config.ts";
 import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
 import plaintextMeta from "./_util/plugins/plaintext-meta.ts";
 
@@ -11,12 +11,7 @@ const site = lume({
   dest: "./_out",
   location: new URL("https://andreubotella.com"),
 }, {
-  markdown: {
-    options: {
-      typographer: true,
-      highlight: markdownHighlight,
-    },
-  },
+  markdown: markdownItConfig,
 });
 
 site.use(metas())
