@@ -1,7 +1,7 @@
 <div class="post-details">
   <p>By Andreu Botella</p>
   {% if published %}
-    <p><time datetime="{{ date | date("ATOM") }}">{{ date | date("HUMAN_DATE") }}</time></p>
+    <p><time datetime="{{ date.toISOString() }}">{{ date | date("HUMAN_DATE") }}</time></p>
   {% else %}
     <p>Not yet published</p>
   {% endif %}

@@ -1,12 +1,12 @@
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
-import date from "lume/plugins/date.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import readingtime from "lume-experimental-plugins/reading_time/mod.ts";
 import markdownItConfig from "./_util/markdown-it-config.ts";
 import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
 import capitalize from "./_util/plugins/capitalize.ts";
 import plaintextMeta from "./_util/plugins/plaintext-meta.ts";
+import date from "./_util/plugins/date.ts";
 
 const site = lume({
   dest: "./_out",
@@ -16,7 +16,9 @@ const site = lume({
 });
 
 site.use(metas())
-  .use(date())
+  .use(date({
+    timeZone: "Europe/Madrid",
+  }))
   .use(slugifyUrls())
   .use(capitalize())
   .use(readingtime())
