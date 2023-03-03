@@ -414,6 +414,7 @@
   "npm": {
     "specifiers": {
       "@types/markdown-it": "@types/markdown-it@12.2.3",
+      "date-fns-tz@2.0.0": "date-fns-tz@2.0.0_date-fns@2.29.3",
       "date-fns@2.29.3": "date-fns@2.29.3",
       "markdown-it-attrs@4.1.6": "markdown-it-attrs@4.1.6_markdown-it@13.0.1",
       "markdown-it-deflist@2.1.0": "markdown-it-deflist@2.1.0",
@@ -443,6 +444,12 @@
       "argparse@2.0.1": {
         "integrity": "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==",
         "dependencies": {}
+      },
+      "date-fns-tz@2.0.0_date-fns@2.29.3": {
+        "integrity": "sha512-OAtcLdB9vxSXTWHdT8b398ARImVwQMyjfYGkKD2zaGpHseG2UPHbHjXELReErZFxWdSLph3c2zOaaTyHfOhERQ==",
+        "dependencies": {
+          "date-fns": "date-fns@2.29.3"
+        }
       },
       "date-fns@2.29.3": {
         "integrity": "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==",
