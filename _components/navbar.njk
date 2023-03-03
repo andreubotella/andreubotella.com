@@ -1,10 +1,10 @@
 <header id="site-header">
-  <h1>AndreuBotella.com</h1>
+  <h1><a href="{{ "/" | url(true) }}">AndreuBotella.com</a></h1>
   <button id="theme-toggle" hidden></button>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog/">Blog</a></li>
+      <li><a href="{{ "/" | url(true) }}">Home</a></li>
+      <li><a href="{{ "/blog/" | url(true) }}">Blog</a></li>
     </ul>
   </nav>
   <script>
