@@ -21,6 +21,13 @@
     {% for css in additional_css %}
       <link rel="stylesheet" href="{{ css }}" crossorigin />
     {% endfor %}
+    <link rel="alternate" type="application/rss+xml" href="/blog/feed.rss" title="AndreuBotella.com">
+    {% if tagFilter %}
+      <link rel="alternate" type="application/rss+xml" href="/blog/tag/{{ tagFilter | slugify | urlencode }}/feed.rss" title="AndreuBotella.com: {{ tagFilter | capitalize }}">
+    {% endif %}
+    {% for alt in link_alternate %}
+      <link rel="alternate" type="{{ alt.type }}" href="{{ alt.href }}" title="{{ alt.title }}">
+    {% endfor %}
     <script>
       let theme = localStorage.theme;
       if (!theme) {
