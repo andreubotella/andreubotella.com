@@ -1,206 +1,211 @@
 :root {
-    --target-footnote-animation: 5s ease-in-out target;
+  --target-footnote-animation: 5s ease-in-out target;
 
-    --code-selection-bg: #b3d4fc;
+  --code-selection-bg: #b3d4fc;
 
-    /* Prism tokens. The colors are for the default PrismJS theme. */
-    --comment-token: slategray;
-    --punctuation-token: #999;
-    --symbol-token: #905;
-    --numeric-token: var(--symbol-token);
-    --literal-token: #690;
-    --operator-token: #9a6e3a;
-    --operator-token-bg: hsla(0, 0%, 100%, .5);
-    --atrule-token: var(--keyword-token);
-    --keyword-token: #07a;
-    --function-token: #DD4A68;
-    --regex-token: var(--variable-token);
-    --variable-token: #e90;
+  /* Prism tokens. The colors are for the default PrismJS theme. */
+  --comment-token: slategray;
+  --punctuation-token: #999;
+  --symbol-token: #905;
+  --numeric-token: var(--symbol-token);
+  --literal-token: #690;
+  --operator-token: #9a6e3a;
+  --operator-token-bg: hsla(0, 0%, 100%, 0.5);
+  --atrule-token: var(--keyword-token);
+  --keyword-token: #07a;
+  --function-token: #dd4a68;
+  --regex-token: var(--variable-token);
+  --variable-token: #e90;
 }
 
 :root[data-theme="dark"] {
-    --code-selection-bg: #244A75;
+  --code-selection-bg: #244a75;
 
-    /* These colors are for the Okaidia theme for PrismJS */
-    --comment-token: #8292a2;
-    --punctuation-token: #f8f8f2;
-    --symbol-token: #f92672;
-    --numeric-token: #ae81ff;
-    --literal-token: #a6e22e;
-    --operator-token: #f8f8f2;
-    --operator-token-bg: inherit;
-    --atrule-token: var(--function-token);
-    --keyword-token: #66d9ef;
-    --function-token: #e6db74;
-    --regex-token: #fd971f;
-    --variable-token: var(--operator-token);
+  /* These colors are for the Okaidia theme for PrismJS */
+  --comment-token: #8292a2;
+  --punctuation-token: #f8f8f2;
+  --symbol-token: #f92672;
+  --numeric-token: #ae81ff;
+  --literal-token: #a6e22e;
+  --operator-token: #f8f8f2;
+  --operator-token-bg: inherit;
+  --atrule-token: var(--function-token);
+  --keyword-token: #66d9ef;
+  --function-token: #e6db74;
+  --regex-token: #fd971f;
+  --variable-token: var(--operator-token);
 }
 
 @keyframes target {
-    from {
-        background-color: rgba(100% 100% 0% / 0.2);
-    }
-    to {
-        background-color: rgba(100% 100% 0% / 0);
-    }
+  from {
+    background-color: rgba(100% 100% 0% / 0.2);
+  }
+  to {
+    background-color: rgba(100% 100% 0% / 0);
+  }
 }
 
 #container {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 @media (width > 880px) {
-    #container {
-        margin: auto;
-        width: 850px;
-    }
+  #container {
+    margin: auto;
+    width: 850px;
+  }
 }
 
 .post-details {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em 0;
 }
 .post-details > * {
-    margin: 0;
-    margin-right: .4em;
+  margin: 0;
+  margin-right: 0.4em;
 }
 .post-details > *:not(:last-child)::after {
-    content: "·";
-    content: "·" / ""; /* Purely decorative! */
-    margin-left: .4em;
-    font-weight: bold;
+  content: "·";
+  content: "·" / ""; /* Purely decorative! */
+  margin-left: 0.4em;
+  font-weight: bold;
 }
 
 .tags {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em 0;
 }
 .tags > p {
-    /* 2px is the vertical margin/border/padding of the a tags. We match it here
-     * so the p's baseline matches the tags. */
-    margin: 2px 0;
-    margin-right: 0.6em;
+  /* 2px is the vertical margin/border/padding of the a tags. We match it here
+   * so the p's baseline matches the tags. */
+  margin: 2px 0;
+  margin-right: 0.6em;
 }
 .tags > ul {
-    display: contents;
+  display: contents;
 }
 .tags > ul > li {
-    display: block;
-    margin-right: 0.6em;
+  display: block;
+  margin-right: 0.6em;
 }
 .tags > ul > li a {
-    border: 1px solid var(--fg-60);
-    background-color: var(--fg-10);
-    /*
-    border: 1px solid color-mix(in srgb, var(--foreground) 60%, var(--background));
-    background-color: color-mix(in srgb, var(--foreground) 10%, var(--background));
-    */
-    display: block;
-    border-radius: .2em;
-    padding: 0 .5em;
-    margin: 1px 0;
-    color: currentcolor;
-    text-decoration: none;
+  border: 1px solid var(--fg-60);
+  background-color: var(--fg-10);
+  /*
+  border: 1px solid color-mix(in srgb, var(--foreground) 60%, var(--background));
+  background-color: color-mix(in srgb, var(--foreground) 10%, var(--background));
+  */
+  display: block;
+  border-radius: 0.2em;
+  padding: 0 0.5em;
+  margin: 1px 0;
+  color: currentcolor;
+  text-decoration: none;
 }
 
 article {
-    margin: 3em 0;
+  margin: 3em 0;
 }
 
 main header {
-    margin-bottom: 2.5em;
+  margin-bottom: 2.5em;
 }
 
 main {
-    hyphens: auto;
-    margin-bottom: 3em;
+  hyphens: auto;
+  margin-bottom: 3em;
 }
 
 /* Footnotes */
 
 .footnote-ref {
-    /* Default browser styling for <sup> */
-    vertical-align: super;
-    line-height: normal;
-    font-size: smaller;
+  /* Default browser styling for <sup> */
+  vertical-align: super;
+  line-height: normal;
+  font-size: smaller;
 }
 
 .footnotes {
-    margin: 2.2em 0;
-    border-top: 2px solid gray;
-    padding-top: 1em;
+  margin: 2.2em 0;
+  border-top: 2px solid gray;
+  padding-top: 1em;
 }
 
 #footnote-label {
-    /* Hidden visually, but not for assistive technology
-     * See https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
-     */
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  /* Hidden visually, but not for assistive technology
+   * See https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+   */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .footnote-item:target {
-    animation: var(--target-footnote-animation);
+  animation: var(--target-footnote-animation);
 }
 .footnote-ref:target {
-    animation: var(--target-footnote-animation);
+  animation: var(--target-footnote-animation);
 }
 
 /* Code blocks */
 
 code {
-    text-align: left;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    hyphens: none;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  hyphens: none;
 }
 
-/*pre:has(> code:only-child)*/ pre.highlight {
-    line-height: 1.5;
-    tab-size: 4;
-    white-space: pre;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: .5em;
-    overflow: auto;
+/*pre:has(> code:only-child)*/
+pre.highlight {
+  line-height: 1.5;
+  tab-size: 4;
+  white-space: pre;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 0.5em;
+  overflow: auto;
 }
 
 :not(pre) > code {
-    padding: .1em;
-    border-radius: .3em;
-    white-space: normal;
+  padding: 0.1em;
+  border-radius: 0.3em;
+  white-space: normal;
 }
 
-
-pre.highlight::selection, pre.highlight ::selection,
-code::selection, code ::selection {
-    background-color: var(--code-selection-bg);
+pre.highlight::selection,
+pre.highlight ::selection,
+code::selection,
+code ::selection {
+  background-color: var(--code-selection-bg);
 }
 
 figure > iframe {
-    width: 100%;
-    height: 25em;
+  width: 100%;
+  height: 25em;
 }
 
 figcaption {
-    text-align: center;
+  text-align: center;
 }
 figcaption > p:only-child {
-    margin: 0;
+  margin: 0;
 }
 
-h1, h2, h3, figcaption {
-    text-wrap: balance;
+h1,
+h2,
+h3,
+figcaption {
+  text-wrap: balance;
 }
 
 /* PrismJS tokens */
@@ -209,15 +214,15 @@ h1, h2, h3, figcaption {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: var(--comment-token);
+  color: var(--comment-token);
 }
 
 .token.punctuation {
-	color: var(--punctuation-token);
+  color: var(--punctuation-token);
 }
 
 .token.namespace {
-	opacity: .7;
+  opacity: 0.7;
 }
 
 .token.property,
@@ -225,12 +230,12 @@ h1, h2, h3, figcaption {
 .token.constant,
 .token.symbol,
 .token.deleted {
-	color: var(--symbol-token);
+  color: var(--symbol-token);
 }
 
 .token.boolean,
 .token.number {
-    color: var(--numeric-token);
+  color: var(--numeric-token);
 }
 
 .token.selector,
@@ -239,7 +244,7 @@ h1, h2, h3, figcaption {
 .token.char,
 .token.builtin,
 .token.inserted {
-	color: var(--literal-token);
+  color: var(--literal-token);
 }
 
 .token.operator,
@@ -247,37 +252,37 @@ h1, h2, h3, figcaption {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-	color: var(--operator-token);
-	background: var(--operator-token-bg);
+  color: var(--operator-token);
+  background: var(--operator-token-bg);
 }
 
 .token.atrule,
 .token.attr-value {
-	color: var(--atrule-token);
+  color: var(--atrule-token);
 }
 
 .token.keyword {
-    color: var(--keyword-token);
+  color: var(--keyword-token);
 }
 
 .token.function,
 .token.class-name {
-	color: var(--function-token);
+  color: var(--function-token);
 }
 
 .token.regex,
 .token.important {
-	color: var(--regex-token);
+  color: var(--regex-token);
 }
 
 .token.variable {
-    color: var(--variable-token);
+  color: var(--variable-token);
 }
 
 .token.important,
 .token.bold {
-	font-weight: bold;
+  font-weight: bold;
 }
 .token.italic {
-	font-style: italic;
+  font-style: italic;
 }
