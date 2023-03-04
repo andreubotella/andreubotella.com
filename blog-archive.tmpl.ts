@@ -11,6 +11,22 @@ interface ArchiveData {
 
 type ArchivePage = ArchiveData & { layout?: string };
 
+function* buildPageAndFeeds(data: ArchiveData): Generator<ArchivePage> {
+  if (!data.url.endsWith("/")) {
+    throw new Error(
+      `Archive data has URL ${
+        JSON.stringify(data.url)
+      }; expected it to end with a slash.`,
+    );
+  }
+  yield data;
+  yield {
+    ...data,
+    url: data.url + "feed.rss",
+    layout: "blog-feed.rss.njk",
+  };
+}
+
 export const layout = "blog-archive.njk";
 
 export default function* (
@@ -30,10 +46,10 @@ export default function* (
   }
 
   // Build the blog main page.
-  yield {
+  yield* buildPageAndFeeds({
     url: "/blog/",
     results: search.pages(IS_BLOG_QUERY, DATE_SORT) as Page[],
-  };
+  });
 
   // Map of (slugified) tags to tag names
   const tags = new Map<string, string>();
@@ -51,13 +67,13 @@ export default function* (
 
   // Build tag pages.
   for (const [tag, tagName] of tags) {
-    yield {
+    yield* buildPageAndFeeds({
       url: `/blog/tag/${tag}/`,
       tagFilter: tagName,
       results: search.pages(
         `${IS_BLOG_QUERY} '${tagName}'`,
         DATE_SORT,
       ) as Page[],
-    };
+    });
   }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>{{ metas.site }}{{ ": " + tagFilter if tagFilter }}</title>
+    <link>{{ "/" | url(true) }}</link>
+    <description>{{ metas.description }}</description>
+    <language>{{ metas.lang }}</language>
+  </channel>
+  {% for post in results %}
+  <item>
+    <title>{{ post.data.title_plaintext }}</title>
+    <link>{{ post.data.url | url(true) }}</link>
+    <description>{{ post.data.description | md(true) }}</description>
+    {% for tag in post.data.tags -%}
+    <category>{{ tag }}</category>
+    {% endfor -%}
+    <pubDate>{{ post.data.date.toISOString() }}</pubDate>
+  </item>
+  {% endfor %}
+</rss>
