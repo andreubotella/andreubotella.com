@@ -1,17 +1,16 @@
 metas:
-    type: website
-    site: AndreuBotella.com
-    lang: en
-    description:
-        I'm Andreu Botella, a software developer focused on improving the web
-        platform by working on web standards, browsers and runtimes.
-    keywords:
-        - Andreu Botella
-        - software development
-        - browsers
-        - browser development
-        - web platform
-        - web standards
-        - Deno
-        - Igalia
-    twitter: "@AndreuBotella"
+  type: website
+  site: AndreuBotella.com
+  lang: en
+  description: I'm Andreu Botella, a web browser and standards engineer working
+    at Igalia, and this is my website and blog.
+  keywords:
+    - Andreu Botella
+    - software development
+    - browsers
+    - browser engineering
+    - web platform
+    - web standards
+    - Deno
+    - Igalia
+  twitter: "@AndreuBotella"
