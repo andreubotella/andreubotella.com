@@ -16,7 +16,7 @@ Some of the areas of the web platform and browsers that I have worked on are
 character encodings, form submission, the `multipart/form-data` form submission
 encoding, web workers, structured cloning, text editing and layout, JavaScript
 realms and [`ShadowRealm`](https://github.com/tc39/proposal-shadowrealm), among
-others. I have contributed to various of the [WHATWG](https://whatwg.org) and
+others. I have contributed to several of the [WHATWG](https://whatwg.org) and
 [W3C](https://w3.org) web specifications, and worked on all three mainstream
 browser engines, as well as made extensive contributions to the
 [Deno](https://deno.land) JavaScript runtime.
@@ -25,8 +25,7 @@ Before I started working on web browsers and standards, I used to be a
 full-stack web developer, with experience working with languages, runtimes and
 frameworks such as Node.js, React, Next.js, Express.js and PHP.
 
-Other interests of mine include math, physics, linguistics, music, and LGBTQ+
-activism.
+Other interests of mine include math, physics, linguistics, music...
 
 ## Portfolio
 
