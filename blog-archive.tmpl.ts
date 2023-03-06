@@ -65,6 +65,15 @@ export default function* (
     tags.set(slugifiedTag, tag);
   }
 
+  // Make sure the Igalia tag page exists.
+  {
+    const tag = "Igalia";
+    const slugifiedTag = slugify(tag);
+    if (!tags.has(slugifiedTag)) {
+      tags.set(slugifiedTag, tag);
+    }
+  }
+
   // Build tag pages.
   for (const [tag, tagName] of tags) {
     yield* buildPageAndFeeds({
