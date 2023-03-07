@@ -5,7 +5,6 @@ body {
   grid-template-areas: "header header header" ". main socials";
   place-items: center;
   height: 100vh;
-  width: 100vw;
 }
 
 #site-header {
