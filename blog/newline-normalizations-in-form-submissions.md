@@ -51,8 +51,8 @@ The data to submit from a form is modeled as an
 – entries being pairs of names (strings) and values (either strings or
 [`File`](https://w3c.github.io/FileAPI/#file-section) objects). This is a list
 rather than a map because a form can have multiple values for each name – which
-is how `<input type="file" multiple>` and `<select multiple>` work – and their
-relative order with the rest of form entries matters.
+is how <lang html> `<input type="file" multiple>` and `<select multiple>`</lang>
+work – and their relative order with the rest of form entries matters.
 
 The algorithm that does the job of going through every submittable element
 associated with a particular form and collecting their corresponding form
@@ -204,9 +204,9 @@ Safari were apparently doing some newline normalization (for Firefox, only on
 values) at the time of serializing as `multipart/form-data`.
 
 With `FormData` you can also investigate what the "construct the entry list"
-algorithm does, since if you pass a `<form>` element to the `FormData`
-constructor, it will call that algorithm outside of a form submission context,
-and let you inspect the resulting entry list.
+algorithm does, since if you pass a <lang html> `<form>`</lang> element to the
+`FormData` constructor, it will call that algorithm outside of a form submission
+context, and let you inspect the resulting entry list.
 
 ```html
 <form id="form">
@@ -260,8 +260,9 @@ since their results are equivalent.
 One thing I skipped when I covered the "construct an entry list" algorithm above
 is that, at the end of the algorithm, after all entries corresponding to
 controls have been added to the entry list, a `formdata` event is fired on the
-relevant `<form>` element. This event has a `formData` field which allows you
-not only to inspect the entry list at that point, but to modify it.
+relevant <lang html> `<form>`</lang> element. This event has a `formData` field
+which allows you not only to inspect the entry list at that point, but to modify
+it.
 
 ```html
 <form
@@ -364,7 +365,7 @@ normalization is present or not is through the `FormData` constructor or the
 standardize on Firefox and Safari's behavior here, as we did in pull request
 [#6624](https://github.com/whatwg/html/pull/6624).
 
-One kink remained, though: `<textarea>` elements support the
+One kink remained, though: <lang html> `<textarea>`</lang> elements support the
 [`wrap="hard"`](https://html.spec.whatwg.org/#attr-textarea-wrap) attribute,
 which adds linebreaks into the submitted value corresponding to how the text is
 linewrapped in the UI. In the spec, this is done through the
@@ -378,8 +379,8 @@ does normalize newlines to LF. So should this be changed?
 
 I thought it was better to align on Firefox's and Safari's behavior, especially
 since this could simplify the mess that is the difference between "raw value",
-"API value" and "value" for `<textarea>` in the spec. Chrome disagreed at first
-–
+"API value" and "value" for <lang html> `<textarea>`</lang> in the spec. Chrome
+disagreed at first –
 [but as it turns out](https://github.com/whatwg/html/issues/6647#issuecomment-834168065),
 Chrome's implementation of the textarea wrapping transformation already
 normalizes to LF, and it's only the normalization in "construct an entry list"
@@ -387,7 +388,7 @@ that then changes those newlines to be CRLF. So removing the early normalization
 would be enough for Chrome to align with Firefox and Safari, even in this case.
 
 Pull request [#6697](https://github.com/whatwg/html/pull/6697) fixes this issue
-with `<textarea>` in the spec, and the follow-up issue
+with <lang html> `<textarea>`</lang> in the spec, and the follow-up issue
 [#6662](https://github.com/whatwg/html/issues/6662) will take care of
 simplifying the textarea wrapping transformation in the spec, as well as ensure
 that it matches implementations.

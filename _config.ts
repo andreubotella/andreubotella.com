@@ -7,6 +7,7 @@ import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
 import capitalize from "./_util/plugins/capitalize.ts";
 import plaintextMeta from "./_util/plugins/plaintext-meta.ts";
 import date from "./_util/plugins/date.ts";
+import inlineHighlight from "./_util/plugins/inline-highlight.ts";
 
 const site = lume({
   dest: "./_out",
@@ -21,6 +22,7 @@ site.use(metas())
   }))
   .use(slugifyUrls())
   .use(capitalize())
+  .use(inlineHighlight())
   .use(readingtime())
   .use(blogAutodescriptor())
   .use(plaintextMeta());
