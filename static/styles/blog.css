@@ -208,6 +208,32 @@ figcaption {
   text-wrap: balance;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 2px solid var(--fg-20);
+}
+
+.anchor {
+  font-weight: normal;
+  text-decoration: none;
+  font-size: min(1em, 0.5rem + 0.5em);
+  color: var(--link-color); /* Even if visited */
+}
+:is(h2, h3, h4, h5, h6) .anchor {
+  visibility: hidden;
+}
+:is(h2, h3, h4, h5, h6):hover .anchor {
+  visibility: visible;
+}
+.anchor:hover,
+.anchor:active {
+  visibility: visible;
+  text-decoration: underline;
+}
+
 /* PrismJS tokens */
 
 .token.comment,
