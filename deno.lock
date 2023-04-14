@@ -416,7 +416,6 @@
       "@types/markdown-it": "@types/markdown-it@12.2.3",
       "date-fns-tz@2.0.0": "date-fns-tz@2.0.0_date-fns@2.29.3",
       "date-fns@2.29.3": "date-fns@2.29.3",
-      "markdown-it-anchor": "markdown-it-anchor@8.6.7_@types+markdown-it@12.2.3_markdown-it@13.0.1",
       "markdown-it-attrs@4.1.6": "markdown-it-attrs@4.1.6_markdown-it@13.0.1",
       "markdown-it-deflist@2.1.0": "markdown-it-deflist@2.1.0",
       "markdown-it-footnote": "markdown-it-footnote@3.0.3",
@@ -474,13 +473,6 @@
         "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
         "dependencies": {
           "js-tokens": "js-tokens@4.0.0"
-        }
-      },
-      "markdown-it-anchor@8.6.7_@types+markdown-it@12.2.3_markdown-it@13.0.1": {
-        "integrity": "sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==",
-        "dependencies": {
-          "@types/markdown-it": "@types/markdown-it@12.2.3",
-          "markdown-it": "markdown-it@13.0.1"
         }
       },
       "markdown-it-attrs@4.1.6_markdown-it@13.0.1": {

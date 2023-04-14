@@ -1,5 +1,4 @@
-import footnotePlugin from "npm:markdown-it-footnote";
-import anchorPlugin from "npm:markdown-it-anchor";
+import markdownItFootnote from "npm:markdown-it-footnote";
 import Prism from "npm:prismjs";
 import { DOMParser, type Element } from "lume/deps/dom.ts";
 
@@ -64,15 +63,7 @@ const rules: Renderer.RenderRuleRecord = {
 };
 
 export default {
-  plugins: [
-    footnotePlugin,
-    [anchorPlugin, {
-      permalink: anchorPlugin.permalink.linkInsideHeader({
-        ariaHidden: true,
-        class: "anchor",
-      }),
-    }],
-  ],
+  plugins: [markdownItFootnote],
   rules,
   options: {
     typographer: true,
