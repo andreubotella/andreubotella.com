@@ -66,10 +66,6 @@ body {
   width: var(--logo-size);
   margin: var(--logo-margin);
 }
-#socials #social-twitter {
-  content: url("/images/twitter-social.png");
-  content: url("/images/twitter-social.png") / "Twitter:";
-}
 #socials #social-mastodon {
   content: url("/images/mastodon-social.png");
   content: url("/images/mastodon-social.png") / "Mastodon:";
