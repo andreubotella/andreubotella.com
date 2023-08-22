@@ -9,32 +9,49 @@
   </nav>
   <script>
     const themeToggle = document.getElementById("theme-toggle");
+    const isOneDark = (document.documentElement.dataset.theme === "dark");
+
+    function themeForCounter(counter) {
+      if (counter % 10 === 0) {
+        return "gradient";
+      } else if (Boolean((counter - Math.floor(counter/10)) % 2) === isOneDark) {
+        return "dark";
+      } else {
+        return "light";
+      }
+    }
+    function clampToLightDark(theme) {
+      return (theme === "dark") ? "dark" : "light";
+    }
+
     let themeChangeCounter = 0;
-    function switchTheme(theme) {
+    function switchTheme() {
       themeChangeCounter++;
-      if (themeChangeCounter % 10 === 0) {
-        document.documentElement.dataset.theme = "light";
+      const currentTheme = themeForCounter(themeChangeCounter);
+      const nextTheme = themeForCounter(themeChangeCounter + 1);
+
+      document.documentElement.dataset.theme = clampToLightDark(currentTheme);
+      if (currentTheme === "gradient") {
         document.documentElement.dataset.blueGradient = "";
       } else {
-        document.documentElement.dataset.theme = theme;
         delete document.documentElement.dataset.blueGradient;
       }
+      localStorage.theme = clampToLightDark(currentTheme);
+
       themeToggle.hidden = false;
-      if (themeChangeCounter % 10 === 9) {
+      if (nextTheme === "gradient") {
         themeToggle.ariaLabel = "Switch to blue gradient";
         themeToggle.textContent = "🔵";
-      } else if (theme === "dark") {
+      } else if (nextTheme === "light") {
         themeToggle.ariaLabel = "Switch to light mode";
         themeToggle.textContent = "☀️";
       } else {
         themeToggle.ariaLabel = "Switch to dark mode";
         themeToggle.textContent = "🌙";
       }
-      localStorage.theme = theme;
     }
-    switchTheme(document.documentElement.dataset.theme === "dark" ? "dark" : "light");
-    themeToggle.addEventListener("click", () => {
-      switchTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark")
-    });
+
+    switchTheme();
+    themeToggle.addEventListener("click", switchTheme);
   </script>
 </header>
