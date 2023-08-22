@@ -80,12 +80,24 @@
   --fg-10: #2d2d2d; /* color-mix(in srgb, var(--foreground) 10%, var(--background)) */
 }
 
+:root[data-blue-gradient] {
+  --foreground: #1a1a1a;
+  --code-bg: transparent;
+  --fg-60: rgba(26 26 26 / 0.6);
+  --fg-10: rgba(26 26 26 / 0.1);
+}
+
 body {
   color: var(--foreground);
   background-color: var(--background);
   margin: 0;
   font-family: "Fira Sans", sans-serif;
   line-height: 1.3;
+}
+
+:root[data-blue-gradient] body {
+  background: radial-gradient(circle farthest-side, #62187de6, #6868b7c4, aquamarine) center /
+    contain;
 }
 
 #site-header {

@@ -9,10 +9,21 @@
   </nav>
   <script>
     const themeToggle = document.getElementById("theme-toggle");
+    let themeChangeCounter = 0;
     function switchTheme(theme) {
-      document.documentElement.dataset.theme = theme;
+      themeChangeCounter++;
+      if (themeChangeCounter % 10 === 0) {
+        document.documentElement.dataset.theme = "light";
+        document.documentElement.dataset.blueGradient = "";
+      } else {
+        document.documentElement.dataset.theme = theme;
+        delete document.documentElement.dataset.blueGradient;
+      }
       themeToggle.hidden = false;
-      if (theme === "dark") {
+      if (themeChangeCounter % 10 === 9) {
+        themeToggle.ariaLabel = "Switch to blue gradient";
+        themeToggle.textContent = "🔵";
+      } else if (theme === "dark") {
         themeToggle.ariaLabel = "Switch to light mode";
         themeToggle.textContent = "☀️";
       } else {

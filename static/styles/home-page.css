@@ -14,14 +14,14 @@ body {
 
 #container {
   display: contents;
-  /* background: radial-gradient(circle farthest-side, #62187de6, #6868b7c4, aquamarine) center /
-    contain; */
 }
 
 #container main {
   grid-area: main;
   max-width: 650px;
-  /* background: radial-gradient(closest-side, #bddadfb3, #bddadf59, #bddadf00); */
+}
+:root[data-blue-gradient] #container main {
+  background: radial-gradient(closest-side, #bddadfb3, #bddadf59, #bddadf00);
 }
 
 #container main,
@@ -33,7 +33,9 @@ body {
   grid-area: socials;
   align-self: end;
   justify-self: end;
-  /* background: radial-gradient(farthest-side at bottom right, #fff, 80%, #fff0); */
+}
+:root[data-blue-gradient] #socials {
+  background: radial-gradient(farthest-side at bottom right, #fff, 80%, #fff0);
 }
 
 #socials > dl {
