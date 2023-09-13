@@ -4,13 +4,13 @@ layout: home-layout.njk
 
 # AndreuBotella.com
 
-Hi. I'm Andreu Botella (pronouns he/they), a web browser and standards engineer
-working at [Igalia](https://igalia.com). I'm currently working on various things
-in the [Chromium](https://www.chromium.org/Home) browser engine (which powers
-browsers such as Google Chrome), largely involving website layout. I also work
-on the [WinterCG](https://wintercg.org) project, helping bring features highly
-wanted by server-side JavaScript runtimes into the web standards, and
-implementing them in browsers.
+Hi. I'm Andreu Botella (pronouns they/them), a web browser and standards
+engineer working at [Igalia](https://igalia.com). I'm currently working on
+various things in the [Chromium](https://www.chromium.org/Home) browser engine
+(which powers browsers such as Google Chrome), largely involving website layout.
+I also work on the [WinterCG](https://wintercg.org) project, helping bring
+features highly wanted by server-side JavaScript runtimes into the web
+standards, and implementing them in browsers.
 
 Some of the areas of the web platform and browsers that I have worked on are
 character encodings, form submission, the `multipart/form-data` form submission
