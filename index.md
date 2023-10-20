@@ -9,8 +9,9 @@ engineer working at [Igalia](https://igalia.com). I'm currently working on
 various things in the [Chromium](https://www.chromium.org/Home) browser engine
 (which powers browsers such as Google Chrome), largely involving website layout.
 I also work on the [WinterCG](https://wintercg.org) project, helping bring
-features highly wanted by server-side JavaScript runtimes into the web
-standards, and implementing them in browsers.
+features highly wanted by server-side JavaScript runtimes into the web and JS
+standards, and implementing them in browsers and JS engines – particularly
+[`AsyncContext`](https://github.com/tc39/proposal-async-context).
 
 Some of the areas of the web platform and browsers that I have worked on are
 character encodings, form submission, the `multipart/form-data` form submission
@@ -38,6 +39,14 @@ in web standards](https://andreubotella.github.io/multipart-form-data)
 [A self-building and self-updating mirror of the CSS Working Group specifications](https://andreubotella.github.io/csswg-auto-build)
 ([GitHub](https://github.com/andreubotella/csswg-auto-build))
 
-Lightning talk on BlinkOn 17 (November 2022):
-["Specifying `line-clamp`"](https://youtu.be/39qvqvuJxT8?t=1757)
+Lightning talk at BlinkOn 17 (November 2022):
+[“Specifying `line-clamp`”](https://youtu.be/DWZ3BcDSpo0)
 ([slides](https://abotella.pages.igalia.com/blink-on-17-line-clamp/))
+
+Lightning talk at BlinkOn 18 (October 2023):
+[“Updates on `line-clamp`”](https://youtu.be/ycWhFbKSDEI?t=2310)
+([slides](https://abotella.pages.igalia.com/line-clamp-2023/))
+
+Breakout talk at BlinkOn 18 (October 2023):
+[“Integrating Task Attribution and `AsyncContext`”](https://youtu.be/60-8DGUx1VY)
+([slides](https://abotella.pages.igalia.com/async-context-integration/))
