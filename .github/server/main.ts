@@ -22,7 +22,7 @@ serve((req) => {
   if (
     url.hostname !== "localhost" &&
     url.origin !== "https://andreubotella.com" &&
-    !/^https:\/\/andreubotella-com-[0-9a-z]+\.deno\.dev$/.test(url.origin)
+    !/^https:\/\/andreubotella-com-[0-9a-z-]+\.deno\.dev$/.test(url.origin)
   ) {
     return Response.redirect(
       replaceHost("https://andreubotella.com"),
