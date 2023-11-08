@@ -51,7 +51,8 @@ Breakout talk at BlinkOn 18 (October 2023):
 [“Integrating Task Attribution and `AsyncContext`”](https://youtu.be/60-8DGUx1VY)
 ([slides](https://abotella.pages.igalia.com/async-context-integration/))
 
-Talk at NodeConf EU (November 2023) together with Nicolò Ribaudo:
+Talk at NodeConf EU (November 2023) together with
+[Nicolò Ribaudo](https://nicr.dev/):
 [“Past and future of server-side runtimes”](https://www.nodeconf.eu/andreu-botella-past-and-future-of-server-side-runtimes)
 (video upcoming,
 [slides](https://abotella.pages.igalia.com/past-and-future-of-server-side-runtimes))
