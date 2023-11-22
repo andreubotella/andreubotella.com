@@ -1,7 +1,7 @@
 import lume from "lume/mod.ts";
 import metas from "lume/plugins/metas.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
-import readingtime from "lume-experimental-plugins/reading_time/mod.ts";
+import readingInfo from "lume/plugins/reading_info.ts";
 import markdownItConfig from "./_util/markdown-it-config.ts";
 import blogAutodescriptor from "./_util/plugins/blog-autodesc.ts";
 import capitalize from "./_util/plugins/capitalize.ts";
@@ -23,7 +23,7 @@ site.use(metas())
   .use(slugifyUrls())
   .use(capitalize())
   .use(inlineHighlight())
-  .use(readingtime())
+  .use(readingInfo())
   .use(blogAutodescriptor())
   .use(plaintextMeta());
 
