@@ -5,7 +5,7 @@
   {% else %}
     <p>Not yet published</p>
   {% endif %}
-  <p>{{ readingTime.minutes or "???" }} minutes</p>
+  <p>{{ readingInfo.minutes or "???" }} minutes</p>
 </div>
 <div class="tags">
   {% if tags | length %}
