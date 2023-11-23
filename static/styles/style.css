@@ -143,6 +143,23 @@ body {
   }
 }
 
+@media (width < 365px) {
+  #site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  #site-header #theme-toggle {
+    float: right;
+  }
+  #site-header nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--site-header-horizontal-margin);
+    grid-column-end: span 2;
+  }
+}
+
 #theme-toggle {
   appearance: none;
   border: 1px solid var(--fg-60);
@@ -181,4 +198,9 @@ iframe.youtube {
   width: 75%;
   max-width: 560px;
   aspect-ratio: 16/9;
+}
+@media (width <= 500px) {
+  iframe.youtube {
+    width: 100%;
+  }
 }
