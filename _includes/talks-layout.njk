@@ -1,0 +1,66 @@
+---
+layout: layout.njk
+additional_css:
+  - /styles/blog.css
+---
+<main>
+  <h1>{{ title | md(true) | safe }}</h1>
+
+  <p>These are various talks I’ve given at various events about my work on web
+  browsers and standards.</p>
+
+  {% for talk in talks %}
+  <section class="talk" id="{{ talk.name | md(true) | striptags | slugify }}">
+    <h1>{{ talk.name | md(true) | safe }}</h1>
+
+    {% if talk.coSpeakers %}
+    <p><em>(given together with
+      {%- for cospeaker in talk.coSpeakers -%}
+        {%- if loop.last and not loop.first %}
+          and
+        {%- elif not loop.first -%}
+          ,
+        {%- endif %}
+        <a target="_new" href="{{ cospeaker.url }}">{{ cospeaker.name }}</a>
+        {%- if loop.last -%}
+          )
+        {%- endif %}
+      {%- endfor %}
+    </em></p>
+    {% endif %}
+
+    <dl>
+      <dt>Event:</dt>
+      <dd><a target="_new" href="{{ talk.event.url }}">{{ talk.event.name }}</a></dd>
+      <dt>Date:</dt>
+      {% if (talk.date | string) === talk.date %}
+      <dd>{{ talk.date }}</dd>
+      {% else %}
+      <dd><time datetime="{{ talk.date | date }}">{{ talk.date | date("HUMAN_DATE") }}</time></dd>
+      {% endif %}
+      <dt>Length:</dt>
+      <dd>{{ talk.length }}</dd>
+      <dt>Slides:</dt>
+      {% if talk.slides %}
+      <dd><a target="_new" href="{{ talk.slides }}">{{ talk.slides }}</a></dd>
+      {% else %}
+      <dd>TODO</dd>
+      {% endif %}
+    </dl>
+
+    {% if talk.youtubeId %}
+    <iframe class="youtube"
+      src="https://www.youtube-nocookie.com/embed/{{ talk.youtubeId }}"
+      title="YouTube video player: {{ talk.name | md(true) | striptags(true) }}" frameborder="0"
+      allow="picture-in-picture; web-share" allowfullscreen></iframe>
+    {% else %}
+    <p>(Youtube video pending)</p>
+    {% endif %}
+
+    <div class="description">
+      {{ talk.description | md | safe }}
+    </div>
+
+  </section>
+  {% endfor %}
+</main>
