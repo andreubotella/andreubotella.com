@@ -150,3 +150,11 @@ body {
     padding: 0 30px;
   }
 }
+
+@media (width <= 380px) {
+  #socials > dl {
+    margin-left: auto;
+    margin-right: auto;
+    width: min-content;
+  }
+}
