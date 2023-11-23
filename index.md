@@ -39,20 +39,4 @@ in web standards](https://andreubotella.github.io/multipart-form-data)
 [A self-building and self-updating mirror of the CSS Working Group specifications](https://andreubotella.github.io/csswg-auto-build)
 ([GitHub](https://github.com/andreubotella/csswg-auto-build))
 
-Lightning talk at BlinkOn 17 (November 2022):
-[“Specifying `line-clamp`”](https://youtu.be/DWZ3BcDSpo0)
-([slides](https://abotella.pages.igalia.com/blink-on-17-line-clamp/))
-
-Lightning talk at BlinkOn 18 (October 2023):
-[“Updates on `line-clamp`”](https://youtu.be/VZNm7ik4hdE)
-([slides](https://abotella.pages.igalia.com/line-clamp-2023/))
-
-Breakout talk at BlinkOn 18 (October 2023):
-[“Integrating Task Attribution and `AsyncContext`”](https://youtu.be/vGCOwR73hC8)
-([slides](https://abotella.pages.igalia.com/async-context-integration/))
-
-Talk at NodeConf EU (November 2023) together with
-[Nicolò Ribaudo](https://nicr.dev/):
-[“Past and future of server-side runtimes”](https://www.nodeconf.eu/andreu-botella-past-and-future-of-server-side-runtimes)
-(video upcoming,
-[slides](https://abotella.pages.igalia.com/past-and-future-of-server-side-runtimes))
+[See also the various talks I've given.](/talks/)

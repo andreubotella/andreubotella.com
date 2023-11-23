@@ -1,0 +1,11 @@
+---
+# For non-blog pages other than the home page
+layout: layout.njk
+additional_css:
+  - /styles/blog.css
+---
+<main>
+  <h1>{{ title | md(true) | safe }}</h1>
+
+  {{ content | safe }}
+</main>

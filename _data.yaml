@@ -1,3 +1,4 @@
+layout: page-layout.njk
 metas:
   type: website
   site: AndreuBotella.com
