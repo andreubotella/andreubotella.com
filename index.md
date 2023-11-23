@@ -2,7 +2,7 @@
 layout: home-layout.njk
 ---
 
-# AndreuBotella.com
+# Andreu<wbr>Botella<wbr>.com
 
 Hi. I'm Andreu Botella (pronouns they/them), a web browser and standards
 engineer working at [Igalia](https://igalia.com). I'm currently working on
