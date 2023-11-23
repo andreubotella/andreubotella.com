@@ -1,7 +1,4 @@
-import { serve } from "https://deno.land/std@0.178.0/http/server.ts";
-
-// See https://github.com/denoland/deno_std/pull/3220
-import { serveDir } from "https://raw.githubusercontent.com/denoland/deno_std/main/http/file_server.ts";
+import { serveDir } from "https://deno.land/std@0.207.0/http/file_server.ts";
 
 const GITHUB_IO_REDIRECTS = [
   "csswg-auto-build",
@@ -9,7 +6,7 @@ const GITHUB_IO_REDIRECTS = [
   "multipart-form-data",
 ];
 
-serve((req) => {
+Deno.serve((req) => {
   const url = new URL(req.url);
   const firstPathComponent = url.pathname.split("/")[1];
 
