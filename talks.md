@@ -80,7 +80,7 @@ two features agree in regards to web APIs, and how they should be layered.
 This lightning talk discusses the updates on `line-clamp` that happened since
 the previous edition of BlinkOn, in particular about how the CSS Working Group
 is working on two separate proposals, and on how I made working implementations
-in Blink for both of them.
+in Chromium for both of them.
 
 ## “Specifying `line-clamp`”
 
