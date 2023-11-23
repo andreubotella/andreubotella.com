@@ -28,12 +28,14 @@ _(given together with [Nicolò Ribaudo](https://github.com/nicolo-ribaudo))_
 The history of server-side JavaScript runtimes has seen evolutions and
 revolutions in a number of aspects: ways of doing I/O, module systems,
 interoperability across different runtimes, interoperability with the web, and
-much more. This talk explores this history, covering past innovations and
-standardization efforts (did you know that
-[CommonJS](https://wiki.commonjs.org/wiki/CommonJS) was much more than a module
-system?). We then learn about [WinterCG](https://wintercg.org/), a new effort to
-coordinate runtimes to interoperate with the web, and discuss how it can shape
-the future of server-side JavaScript.
+much more.
+
+This talk explores this history, covering past innovations and standardization
+efforts (did you know that [CommonJS](https://wiki.commonjs.org/wiki/CommonJS)
+was much more than a module system?). We then learn about
+[WinterCG](https://wintercg.org/), a new effort to coordinate runtimes to
+interoperate with the web, and discuss how it can shape the future of
+server-side JavaScript.
 
 ## “Integrating Task Attribution and `AsyncContext`”
 
