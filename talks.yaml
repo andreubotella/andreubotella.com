@@ -1,0 +1,81 @@
+title: Talks
+layout: talks-layout.njk
+metas:
+  description: >
+    A number of talks I've given at various events about my work on web browsers
+    and standards.
+
+talks:
+  - name: Past and future of server-side runtimes
+    coSpeakers:
+      - name: Nicolò Ribaudo
+        url: https://github.com/nicolo-ribaudo
+    event:
+      name: NodeConf EU 2023
+      url: https://www.nodeconf.eu
+    date: 2023-11-08
+    length: ~25 minutes
+    slides: https://abotella.pages.igalia.com/past-and-future-of-server-side-runtimes
+    youtubeId: LdnmN2qGo0g
+    description: |
+      The history of server-side JavaScript runtimes has seen evolutions and
+      revolutions in a number of aspects: ways of doing I/O, module systems,
+      interoperability across different runtimes, interoperability with the web,
+      and much more.
+
+      This talk explores this history, covering past innovations and
+      standardization efforts (did you know that
+      [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) was much more than a
+      module system?). We then learn about [WinterCG](https://wintercg.org/), a
+      new effort to coordinate runtimes to interoperate with the web, and
+      discuss how it can shape the future of server-side JavaScript.
+
+  - name: Integrating Task Attribution and `AsyncContext`
+    event:
+      name: BlinkOn 18
+      url: https://www.chromium.org/events/blinkon-18/
+    date: 2023-10-19
+    length: ~25 minutes
+    slides: https://abotella.pages.igalia.com/async-context-integration
+    youtubeId: vGCOwR73hC8
+    description: |
+      [`AsyncContext`](https://github.com/tc39/proposal-async-context) is a TC39
+      proposal that tracks user-provided values across asynchronous
+      continuations (`await` points), as well as web APIs such as event
+      handlers. The work that's currently being done in
+      [task attribution](https://docs.google.com/document/d/1_m-h9_KgDMddTS2OFP0CShr4zjU-C-up64DwCrCfBo4/edit?usp=sharing)
+      also tracks browser-internal values across asynchronous continuations and
+      web APIs. It would be better to layer one of these two features on top of
+      the other, in Chromium and in the specifications.
+
+      This session aims to discuss this integration, whether the semantics of
+      these two features agree in regards to web APIs, and how they should be
+      layered.
+
+  - name: Updates on `line-clamp`
+    event:
+      name: BlinkOn 18
+      url: https://www.chromium.org/events/blinkon-18/
+    date: 2023-10-17
+    length: Lightning talk (~3 minutes)
+    slides: https://abotella.pages.igalia.com/line-clamp-2023
+    youtubeId: VZNm7ik4hdE
+    description: |
+      This lightning talk discusses the updates on `line-clamp` that happened
+      since the previous edition of BlinkOn, in particular about how the CSS
+      Working Group is working on two separate proposals, and on how I made
+      working implementations in Chromium for both of them.
+
+  - name: Specifying `line-clamp`
+    event:
+      name: BlinkOn 17
+      url: https://www.chromium.org/events/blinkon-17/
+    date: 2022-11-15
+    length: Lightning talk (~3 minutes)
+    slides: https://abotella.pages.igalia.com/blink-on-17-line-clamp
+    youtubeId: DWZ3BcDSpo0
+    description: |
+      This lightning talk covers the `-webkit-line-clamp` CSS property, which
+      clamps an element's text to a number of lines with an ellipsis at the end.
+      It talks about its many shortcomings, and about various proposals under
+      discussion by the CSS Working Group on how to fix them.
