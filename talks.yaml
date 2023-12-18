@@ -15,6 +15,7 @@ talks:
       url: https://www.nodeconf.eu
     date: 2023-11-08
     length: ~25 minutes
+    target: Server-side JS developers
     slides: https://abotella.pages.igalia.com/past-and-future-of-server-side-runtimes
     youtubeId: LdnmN2qGo0g
     description: |
@@ -36,6 +37,7 @@ talks:
       url: https://www.chromium.org/events/blinkon-18/
     date: 2023-10-19
     length: ~25 minutes
+    target: Chromium developers, browser developers, web standards engineers
     slides: https://abotella.pages.igalia.com/async-context-integration
     youtubeId: vGCOwR73hC8
     description: |
@@ -58,6 +60,7 @@ talks:
       url: https://www.chromium.org/events/blinkon-18/
     date: 2023-10-17
     length: Lightning talk (~3 minutes)
+    target: Chromium developers, browser developers, web standards engineers
     slides: https://abotella.pages.igalia.com/line-clamp-2023
     youtubeId: VZNm7ik4hdE
     description: |
@@ -72,6 +75,7 @@ talks:
       url: https://www.chromium.org/events/blinkon-17/
     date: 2022-11-15
     length: Lightning talk (~3 minutes)
+    target: Chromium developers, browser developers, web standards engineers
     slides: https://abotella.pages.igalia.com/blink-on-17-line-clamp
     youtubeId: DWZ3BcDSpo0
     description: |

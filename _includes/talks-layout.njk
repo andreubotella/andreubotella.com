@@ -38,6 +38,8 @@ additional_css:
       {% else %}
       <dd><time datetime="{{ talk.date | date }}">{{ talk.date | date("HUMAN_DATE") }}</time></dd>
       {% endif %}
+      <dt>Target audience:</dt>
+      <dd>{{ talk.target }}</dd>
       <dt>Length:</dt>
       <dd>{{ talk.length }}</dd>
       <dt>Slides:</dt>
