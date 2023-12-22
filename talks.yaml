@@ -36,7 +36,7 @@ talks:
       name: BlinkOn 18
       url: https://www.chromium.org/events/blinkon-18/
     date: 2023-10-19
-    length: ~25 minutes
+    length: ~30 minutes
     target: Chromium developers, browser developers, web standards engineers
     slides: https://abotella.pages.igalia.com/async-context-integration
     youtubeId: vGCOwR73hC8
