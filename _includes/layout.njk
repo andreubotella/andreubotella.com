@@ -29,12 +29,41 @@
       <link rel="alternate" type="{{ alt.type }}" href="{{ alt.href }}" title="{{ alt.title }}">
     {% endfor %}
     <script>
-      let theme = localStorage.theme;
-      if (!theme) {
-        const darkMode = matchMedia("(prefers-color-scheme: dark)").matches;
-        theme = darkMode ? "dark" : "light";
+      function themeForCounter(counter) {
+        if (counter % 10 === 0) {
+          return "gradient";
+        } else if (counter % 2 === 1) {
+          return "dark";
+        } else {
+          return "light";
+        }
       }
-      document.documentElement.dataset.theme = theme;
+
+      function resetDocumentTheme() {
+        const theme = themeForCounter(globalThis.themeChangeCounter);
+        if (theme === "light") {
+          document.documentElement.dataset.theme = "light";
+          delete document.documentElement.dataset.blueGradient;
+        } else {
+          document.documentElement.dataset.theme = "dark";
+          if (theme === "gradient") {
+            document.documentElement.dataset.blueGradient = "";
+          } else {
+            delete document.documentElement.dataset.blueGradient;
+          }
+        }
+      }
+
+      if (localStorage.theme === "gradient") {
+        globalThis.themeChangeCounter = 10;
+      } else if (localStorage.theme === "dark") {
+        globalThis.themeChangeCounter = 1;
+      } else if (localStorage.theme === "light") {
+        globalThis.themeChangeCounter = 0;
+      } else {
+        globalThis.themeChangeCounter = Number(matchMedia("(prefers-color-scheme: dark)").matches);
+      }
+      resetDocumentTheme();
     </script>
   </head>
 
