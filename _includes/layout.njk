@@ -61,7 +61,8 @@
       } else if (localStorage.theme === "light") {
         globalThis.themeChangeCounter = 0;
       } else {
-        globalThis.themeChangeCounter = Number(matchMedia("(prefers-color-scheme: dark)").matches);
+        globalThis.themeChangeCounter =
+          matchMedia("(prefers-color-scheme: dark)").matches ? 1 : 0;
       }
       resetDocumentTheme();
     </script>
