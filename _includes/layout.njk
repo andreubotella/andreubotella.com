@@ -30,7 +30,7 @@
     {% endfor %}
     <script>
       function themeForCounter(counter) {
-        if (counter % 10 === 0) {
+        if (counter !== 0 && counter % 10 === 0) {
           return "gradient";
         } else if (counter % 2 === 1) {
           return "dark";
