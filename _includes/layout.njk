@@ -41,11 +41,11 @@
 
       function resetDocumentTheme() {
         const theme = themeForCounter(globalThis.themeChangeCounter);
-        if (theme === "light") {
-          document.documentElement.dataset.theme = "light";
+        if (theme === "dark") {
+          document.documentElement.dataset.theme = "dark";
           delete document.documentElement.dataset.blueGradient;
         } else {
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
           if (theme === "gradient") {
             document.documentElement.dataset.blueGradient = "";
           } else {
