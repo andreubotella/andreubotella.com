@@ -6,7 +6,7 @@ additional_css:
 <main>
   <h1>{{ title | md(true) | safe }}</h1>
 
-  <p>These are various talks I’ve given at various events about my work on web
+  <p>These are various talks and interviews I’ve given about my work on web
   browsers and standards.</p>
 
   {% for talk in talks %}
@@ -21,7 +21,11 @@ additional_css:
         {%- elif not loop.first -%}
           ,
         {%- endif %}
+        {% if cospeaker.url %}
         <a target="_new" href="{{ cospeaker.url }}">{{ cospeaker.name }}</a>
+        {%- else %}
+        {{ cospeaker.name }}
+        {%- endif %}
         {%- if loop.last -%}
           )
         {%- endif %}
@@ -30,7 +34,11 @@ additional_css:
     {% endif %}
 
     <dl>
+      {% if talk.type != "interview" %}
       <dt>Event:</dt>
+      {% else %}
+      <dt>Part of:</dt>
+      {% endif %}
       <dd><a target="_new" href="{{ talk.event.url }}">{{ talk.event.name }}</a></dd>
       <dt>Date:</dt>
       {% if (talk.date | string) === talk.date %}
@@ -42,11 +50,17 @@ additional_css:
       <dd>{{ talk.target }}</dd>
       <dt>Length:</dt>
       <dd>{{ talk.length }}</dd>
+      {% if talk.url %}
+      <dt>Link:</dt>
+      <dd><a target="_new" href={{ talk.url }}>{{ talk.url }}</a></dd>
+      {% endif %}
+      {% if (talk.type != "interview") or talk.slides %}
       <dt>Slides:</dt>
       {% if talk.slides %}
       <dd><a target="_new" href="{{ talk.slides }}">{{ talk.slides }}</a></dd>
       {% else %}
       <dd>TODO</dd>
+      {% endif %}
       {% endif %}
     </dl>
 
