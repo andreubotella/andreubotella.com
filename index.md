@@ -39,4 +39,4 @@ in web standards](https://andreubotella.github.io/multipart-form-data)
 [A self-building and self-updating mirror of the CSS Working Group specifications](https://andreubotella.github.io/csswg-auto-build)
 ([GitHub](https://github.com/andreubotella/csswg-auto-build))
 
-[See also the various talks I've given.](/talks/)
+[See also the various talks and interviews I've given.](/talks/)

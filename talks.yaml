@@ -1,11 +1,34 @@
-title: Talks
+title: Talks and interviews
 layout: talks-layout.njk
 metas:
   description: >
-    A number of talks I've given at various events about my work on web browsers
+    A number of talks and interviews I've given about my work on web browsers
     and standards.
 
 talks:
+  - name: "Igalia Chats: CSS Working Group Face To Face Live!"
+    type: interview
+    coSpeakers:
+      - name: other CSS Working Group members
+    event:
+      name: Igalia Chats
+      url: https://www.igalia.com/chats
+    date: 2024-06-19
+    length: ~1 hour (my interview was ~11 minutes)
+    target: Web developers
+    youtubeId: m-V43qO3jrc?start=923
+    url: https://www.igalia.com/chats/css-ftf-live-2024
+    description: |
+      As part of the CSS Working Group Face-to-Face meeting that Igalia
+      organized in June 2024, Brian Kardell and Eric Meyer did an episode of
+      [Igalia Chats](https://www.igalia.com/chats) interviewing various CSSWG
+      members, me included.
+
+      In it, I am being interviewed by Eric Meyer about my work on `line-clamp`,
+      why it needs fixing, how it interacts with CSS Working Group discussions,
+      and the implementation in Chromium. My interview starts at timestamp
+      15:19.
+
   - name: Past and future of server-side runtimes
     coSpeakers:
       - name: Nicolò Ribaudo
