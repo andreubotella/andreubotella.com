@@ -72,10 +72,6 @@ body {
   content: url("/images/mastodon-social.png");
   content: url("/images/mastodon-social.png") / "Mastodon:";
 }
-#socials #social-cohost {
-  content: url("/images/cohost-social.png");
-  content: url("/images/cohost-social.png") / "Cohost:";
-}
 #socials #social-github {
   content: url("/images/github-social.png");
   content: url("/images/github-social.png") / "GitHub:";
