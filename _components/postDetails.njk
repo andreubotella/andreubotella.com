@@ -1,7 +1,12 @@
 <div class="post-details">
-  <p>By <span class="p-author">Andreu Botella</span></p>
+  <p>By <a class="p-author h-card" href="https://andreubotella.com">Andreu Botella</a></p>
   {% if published %}
-    <p><time class="dt-published" datetime="{{ date.toISOString() }}">{{ date | date("HUMAN_DATE") }}</time></p>
+    <p>
+      <time class="dt-published" datetime="{{ date.toISOString() }}">{{ date | date("HUMAN_DATE") }}</time>
+      {% if updated %}
+      (updated <time class="dt-updated" datetime="{{ updated.toISOString() }}">{{ updated | date("HUMAN_DATE") }}</time>)
+      {% endif %}
+    </p>
   {% else %}
     <p>Not yet published</p>
   {% endif %}
