@@ -3,14 +3,16 @@ layout: layout.njk
 additional_css:
   - /styles/blog.css
 ---
-<main>
+<main class="h-entry">
   <header>
-    <h1>{{ title | md(true) | safe }}</h1>
+    <h1 class="p-name">{{ title | md(true) | safe }}</h1>
     {# We're including the component with Nunjucks rather than using Lume
       # components because we need it to pick up the local variables in this
       # template (which are the post's data). #}
     {% include "../_components/postDetails.njk" %}
   </header>
 
-  {{ content | safe }}
+  <div class="e-content">
+    {{ content | safe }}
+  </div>
 </main>

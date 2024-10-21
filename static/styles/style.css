@@ -195,6 +195,7 @@ code {
 iframe.youtube {
   display: block;
   margin: auto;
+  border: none;
   width: 75%;
   max-width: 560px;
   aspect-ratio: 16/9;

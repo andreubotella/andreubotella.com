@@ -11,7 +11,7 @@ additional_css:
 
   {% for talk in talks %}
   <section class="talk" id="{{ talk.name | md(true) | striptags | slugify }}">
-    <h1>{{ talk.name | md(true) | safe }}</h1>
+    <h2>{{ talk.name | md(true) | safe }}</h2>
 
     {% if talk.coSpeakers %}
     <p><em>(given together with
@@ -22,7 +22,7 @@ additional_css:
           ,
         {%- endif %}
         {% if cospeaker.url %}
-        <a target="_new" href="{{ cospeaker.url }}">{{ cospeaker.name }}</a>
+        <a target="_blank" href="{{ cospeaker.url }}">{{ cospeaker.name }}</a>
         {%- else %}
         {{ cospeaker.name }}
         {%- endif %}
@@ -39,7 +39,7 @@ additional_css:
       {% else %}
       <dt>Part of:</dt>
       {% endif %}
-      <dd><a target="_new" href="{{ talk.event.url }}">{{ talk.event.name }}</a></dd>
+      <dd><a target="_blank" href="{{ talk.event.url }}">{{ talk.event.name }}</a></dd>
       <dt>Date:</dt>
       {% if (talk.date | string) === talk.date %}
       <dd>{{ talk.date }}</dd>
@@ -52,12 +52,12 @@ additional_css:
       <dd>{{ talk.length }}</dd>
       {% if talk.url %}
       <dt>Link:</dt>
-      <dd><a target="_new" href={{ talk.url }}>{{ talk.url }}</a></dd>
+      <dd><a target="_blank" href={{ talk.url }}>{{ talk.url }}</a></dd>
       {% endif %}
       {% if (talk.type != "interview") or talk.slides %}
       <dt>Slides:</dt>
       {% if talk.slides %}
-      <dd><a target="_new" href="{{ talk.slides }}">{{ talk.slides }}</a></dd>
+      <dd><a target="_blank" href="{{ talk.slides }}">{{ talk.slides }}</a></dd>
       {% else %}
       <dd>TODO</dd>
       {% endif %}
@@ -67,7 +67,7 @@ additional_css:
     {% if talk.youtubeId %}
     <iframe class="youtube"
       src="https://www.youtube-nocookie.com/embed/{{ talk.youtubeId }}"
-      title="YouTube video player: {{ talk.name | md(true) | striptags(true) }}" frameborder="0"
+      title="YouTube video player: {{ talk.name | md(true) | striptags(true) }}"
       allow="picture-in-picture; web-share" allowfullscreen></iframe>
     {% else %}
     <p>(Youtube video pending)</p>

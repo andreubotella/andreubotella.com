@@ -25,7 +25,7 @@ body {
 }
 
 #container main,
-#socials h1 {
+#socials h2 {
   text-align: center;
 }
 
@@ -36,6 +36,10 @@ body {
 }
 :root[data-blue-gradient] #socials {
   background: radial-gradient(farthest-side at bottom right, #fff, 80%, #fff0);
+}
+
+#socials h2 {
+  font-size: 1.75rem;
 }
 
 #socials > dl {
