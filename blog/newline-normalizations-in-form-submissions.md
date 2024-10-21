@@ -1,6 +1,7 @@
 ---
 title: Newline normalizations in form submissions
 date: 2021-05-27T15:05:15Z
+updated: 2023-03-02T10:29:17Z
 published: true
 description:
     During form submissions in browsers, newlines get normalized to CRLF. That
@@ -14,7 +15,7 @@ tags:
 
 _**Note:** I originally published this post
 [on the WHATWG blog](https://blog.whatwg.org/newline-normalizations-in-form-submission).
-When reposting it in this blog (in February 2023), I added syntax highlighting,
+When reposting it in this blog (in March 2023), I added syntax highlighting,
 fixed a few typos, and added a clarifying comment on one of the code samples._
 
 If you work with form submissions, you might have noticed that form values
