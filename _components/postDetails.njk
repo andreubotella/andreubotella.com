@@ -1,7 +1,7 @@
 <div class="post-details">
-  <p>By Andreu Botella</p>
+  <p>By <span class="p-author">Andreu Botella</span></p>
   {% if published %}
-    <p><time datetime="{{ date.toISOString() }}">{{ date | date("HUMAN_DATE") }}</time></p>
+    <p><time class="dt-published" datetime="{{ date.toISOString() }}">{{ date | date("HUMAN_DATE") }}</time></p>
   {% else %}
     <p>Not yet published</p>
   {% endif %}
@@ -12,7 +12,7 @@
     <p>Tags:</p>
     <ul>
       {% for tag in tags %}
-        <li><a href="/blog/tag/{{ tag | slugify | urlencode }}/">{{ tag }}</a></li>
+        <li><a class="p-category" href="/blog/tag/{{ tag | slugify | urlencode }}/">{{ tag }}</a></li>
       {% endfor %}
     </ul>
   {% else %}
