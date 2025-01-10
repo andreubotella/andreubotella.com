@@ -68,13 +68,16 @@ body {
   --logo-margin: calc(var(--logo-size) * 0.1481);
 }
 #socials dt {
-  aspect-ratio: 1;
   width: var(--logo-size);
   margin: var(--logo-margin);
 }
 #socials #social-mastodon {
   content: url("/images/mastodon-social.png");
   content: url("/images/mastodon-social.png") / "Mastodon:";
+}
+#socials #social-bsky {
+  content: url("/images/bsky-social.png");
+  content: url("/images/bsky-social.png") / "Bluesky:";
 }
 #socials #social-github {
   content: url("/images/github-social.png");
