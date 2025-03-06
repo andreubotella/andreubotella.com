@@ -91,6 +91,10 @@ body {
   content: url("/images/matrix-social.png");
   content: url("/images/matrix-social.png") / "Matrix:";
 }
+#socials #social-signal {
+  content: url("/images/signal-social.png");
+  content: url("/images/signal-social.png") / "Signal:";
+}
 #socials #social-email {
   content: url("/images/email-social.png");
   content: url("/images/email-social.png") / "Email:";
