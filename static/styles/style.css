@@ -108,12 +108,10 @@ body {
 }
 
 :root[data-blue-gradient] body {
-  background: radial-gradient(
-    circle farthest-side,
-    #62187de6,
-    #6868b7c4,
-    aquamarine
-  ) center / contain;
+  background:
+    radial-gradient(circle farthest-side, #bddadfb3, #bddadf59, #bddadf00 35%),
+    radial-gradient(circle farthest-side, #62187de6, #6868b7c4, aquamarine)
+      center / contain fixed;
 }
 
 #site-header {
@@ -205,11 +203,12 @@ code {
 :visited code {
   color: var(--visited-link-color);
 }
-:link:active,
-:visited:active,
-:link:active code,
-:visited:active code {
+:any-link:active,
+:any-link:active code {
   color: var(--active-link-color);
+}
+:any-link code {
+  text-decoration: underline;
 }
 
 iframe.youtube {
